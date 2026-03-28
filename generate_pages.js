@@ -263,7 +263,7 @@ const pages = [
                  
                  <div class="contact-info-item" style="margin-bottom: 20px;">
                     <strong style="color:var(--primary-green)">Business Hours:</strong>
-                    <p>Monday – Sunday | 9:00 AM – 6:00 PM</p>
+                    <p>Monday – Saturday | 8:00 AM – 6:00 PM</p>
                  </div>
             </div>
             <div class="glass" style="padding: 30px;">
