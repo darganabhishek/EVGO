@@ -244,7 +244,7 @@ const pages = [
     content: `
         <div class="grid-2">
             <div>
-                 <h3>Get in Touch</h3>
+                 <h3>EV GO MOVERS LOGISTICS INDIA PVT. LTD.</h3>
                  <p style="margin-bottom: 20px;">Have questions or need a quote? Our team is here to help.</p>
                  
                  <div class="contact-info-item" style="margin-bottom: 20px;">
