@@ -98,7 +98,8 @@ const template = (title, content, isSubdir = false) => `
             <h4>Contact</h4>
             <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
             <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
-            <p><i class="ph-fill ph-map-pin"></i> 607, 6th Floor , Aggarwal Cyber Plaza-1, Netaji Subhash Place, Pitampura, New Delhi-110034</p>
+            <p><i class="ph-fill ph-map-pin"></i> Corporate office - Gurugram</p>
+            <p><i class="ph-fill ph-map-pin"></i> Registered office - Pitampura</p>
         </div>
       </div>
       <div class="footer-bottom text-center">
@@ -248,7 +249,8 @@ const pages = [
                  
                  <div class="contact-info-item" style="margin-bottom: 20px;">
                     <strong style="color:var(--primary-green)">Address:</strong>
-                    <p>607, 6th Floor , Aggarwal Cyber Plaza-1, Netaji Subhash Place, Pitampura, New Delhi-110034</p>
+                    <p>Corporate office - Gurugram</p>
+                    <p>Registered office - Pitampura</p>
                  </div>
                  <div class="contact-info-item" style="margin-bottom: 20px;">
                     <strong style="color:var(--primary-green)">Phone:</strong>

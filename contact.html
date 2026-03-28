@@ -21,17 +21,6 @@
                     linear-gradient(180deg, #0A192F 0%, #020c1b 100%);
         text-align: center;
       }
-      @media (max-width: 768px) {
-        .page-header {
-            padding-top: 100px;
-            padding-bottom: 40px;
-        }
-        .grid-2 {
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 40px;
-        }
-      }
       .content-section {
         padding: 60px 0;
         min-height: 50vh;
@@ -47,7 +36,7 @@
     <nav class="navbar" id="navbar">
       <div class="container nav-container">
         <a href="/" class="logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap text-green"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <img src="/images/logo.png" alt="EV GO MOVERS">
            <span>EV GO <span class="highlight">MOVERS</span></span>
         </a>
         <ul class="nav-links">
@@ -82,7 +71,8 @@
                  
                  <div class="contact-info-item" style="margin-bottom: 20px;">
                     <strong style="color:var(--primary-green)">Address:</strong>
-                    <p>607, 6th Floor , Aggarwal Cyber Plaza-1, Netaji Subhash Place, Pitampura, New Delhi-110034</p>
+                    <p>Corporate office - Gurugram</p>
+                    <p>Registered office - Pitampura</p>
                  </div>
                  <div class="contact-info-item" style="margin-bottom: 20px;">
                     <strong style="color:var(--primary-green)">Phone:</strong>
@@ -99,105 +89,56 @@
                  </div>
             </div>
             <div class="glass" style="padding: 30px;">
-                <form id="contactForm" class="cta-form" style="display: flex; flex-direction: column; gap: 15px;">
-                    <input type="text" name="name" placeholder="Full Name" required style="padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;" />
-                    <input type="email" name="email" placeholder="Email Address" required style="padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;" />
-                    <input type="tel" name="phone" placeholder="Phone Number" required style="padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;" />
-                    <textarea name="query" placeholder="Your Query" required rows="4" style="padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; resize: vertical;"></textarea>
-                    
-                    <button type="submit" id="submitBtn" class="btn btn-primary glow" style="cursor: pointer; align-self: center; width: auto; min-width: 200px; margin-top: 10px; justify-content: center; text-align: center;">SUBMIT</button>
-                    <p id="formStatus" style="display:none; text-align: center; margin-top: 10px; font-size: 0.9rem;"></p>
-                    
-
+                <form class="cta-form" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" placeholder="Your Name" />
+                    <input type="text" placeholder="Pickup Location" />
+                    <input type="text" placeholder="Drop Location" />
+                    <input type="tel" placeholder="Phone Number" />
+                    <button type="button" class="btn btn-primary glow">Get Estimate</button>
+                    <a href="#" class="btn btn-whatsapp text-center" style="background:#25D366; border:none; color:white; justify-content:center;">WhatsApp Us</a>
                 </form>
-
-                <script>
-                    document.getElementById('contactForm').addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        const btn = document.getElementById('submitBtn');
-                        const status = document.getElementById('formStatus');
-                        
-                        // Basic validation
-                        const formData = new FormData(this);
-                        const data = {};
-                        formData.forEach((value, key) => data[key] = value);
-                        
-                        // PLACEHOLDER: Replace with your actual Google Web App URL
-                        const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
-
-                        if(SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT")) {
-                            alert("Please contact the developer to add the Google Sheet URL connection.");
-                            return;
-                        }
-
-                        btn.disabled = true;
-                        btn.innerText = "Sending...";
-                        status.style.display = 'none';
-
-                        fetch(SCRIPT_URL, {
-                            method: 'POST',
-                            mode: 'no-cors', // Important for Google Apps Script
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(data)
-                        })
-                        .then(response => {
-                            // With no-cors, we can't check response.ok, so we assume success if no network error
-                            status.innerText = "Thanks! We'll contact you shortly.";
-                            status.style.color = "#00FF88";
-                            status.style.display = 'block';
-                            this.reset();
-                        })
-                        .catch(error => {
-                            status.innerText = "Error sending data. Please contact us via WhatsApp.";
-                            status.style.color = "#FF4444";
-                            status.style.display = 'block';
-                            console.error('Error:', error);
-                        })
-                        .finally(() => {
-                            btn.disabled = false;
-                            btn.innerText = "Get Estimate";
-                        });
-                    });
-                </script>
             </div>
         </div>
       
       </div>
     </section>
 
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-col">
-        <img src="/images/logo2.png" alt="EV GO MOVERS Logo" style="height: 60px; margin-bottom: 15px; display: block;">
-        <h3>EV GO MOVERS</h3>
-        <p>India’s Leading Electric Packers & Movers Company.</p>
-        <div class="social-links">
-          <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
-          <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h3>EV GO MOVERS</h3>
+          <p>India's Leading Electric Packers & Movers Company.</p>
+          <div class="social-links">
+             <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+             <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+             <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/about.html">About Us</a>
+            <a href="/services.html">Services</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <a href="/services/home-relocation.html">Home Relocation</a>
+            <a href="/services/office-relocation.html">Office Shifting</a>
+            <a href="/services/ev-logistics.html">EV Logistics</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
+            <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
+            <p><i class="ph-fill ph-map-pin"></i> Corporate office - Gurugram</p>
+            <p><i class="ph-fill ph-map-pin"></i> Registered office - Pitampura</p>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="/services.html">Electric Fleet Services</a>
-        <a href="/services.html">Last-Mile Delivery</a>
-        <a href="/services.html">Logistics Management</a>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED. All rights reserved.</p>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
-        <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
-        <p><i class="ph-fill ph-map-pin"></i> Pitampura, New Delhi</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-wrapper">
-        <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED.</p>
-        <a href="http://www.mdinfo.in" target="_blank" class="mdi-link">DESIGNED AND DEVELOPED BY <span class="mdi-name">M.D. INFOTECH</span></a>
-      </div>
-    </div>
-  </footer>
+    </footer>
     <script type="module" src="./main.js"></script>
     <script>
        // Simple script to animate charts if present
