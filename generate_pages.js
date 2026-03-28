@@ -50,7 +50,7 @@ const template = (title, content, isSubdir = false) => `
           <li><a href="/contact.html">Contact</a></li>
         </ul>
         <div class="nav-actions">
-            <a href="/contact.html" class="btn btn-primary small animate-pulse">Get Quote</a>
+            <a href="/contact.html" class="btn btn-primary small animate-pulse">JOIN US</a>
              <button class="mobile-menu-btn" aria-label="Menu">
             <i class="ph ph-list"></i>
           </button>
