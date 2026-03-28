@@ -214,68 +214,71 @@ const pages = [
     content: `
         <div class="grid-2">
             <div class="reveal-left">
-                <h2 class="section-title">Committed to a <span class="text-green">Greener Future</span></h2>
-                <p>EV GO MOVERS actively reduces pollution by replacing fuel-based transport with electric vehicles. Our mission is to lower carbon emissions, reduce noise pollution, and support cleaner urban mobility across India.</p>
-                <div class="feature-list" style="margin-top:20px;">
-                    <div class="trust-item"><i class="ph-fill ph-leaf"></i> 100% Electric Vehicle Fleet</div>
-                    <div class="trust-item"><i class="ph-fill ph-wind"></i> Zero Tailpipe Emissions</div>
-                    <div class="trust-item"><i class="ph-fill ph-speaker-slash"></i> Noise Pollution Reduction</div>
+                <h2 class="section-title">The EV <span class="text-green">Revolution</span></h2>
+                <p>EV GO MOVERS isn’t just changing how you move; we are redefining the efficiency of Indian logistics. By replacing fuel-heavy transport with a high-performance electric fleet, we deliver 100% cleaner results at a fraction of the cost.</p>
+                <div class="feature-list" style="margin-top:25px;">
+                    <div class="trust-item" style="background: rgba(0, 255, 136, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid var(--primary-green);">
+                         <i class="ph-fill ph-check-circle" style="color: var(--primary-green);"></i> <strong>ZERO</strong> Tailpipe Emissions
+                    </div>
+                    <div class="trust-item" style="background: rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid #4cc9f0;">
+                         <i class="ph-fill ph-currency-circle-dollar" style="color: #4cc9f0;"></i> <strong>75%</strong> Operational Savings
+                    </div>
                 </div>
             </div>
             <div class="reveal-right">
-                <div class="impact-comparison glass" style="padding: 30px;">
-                    <h3 class="text-center" style="margin-bottom: 25px;">Unique Comparison</h3>
+                <div class="impact-comparison glass" style="padding: 40px; border: 1px solid rgba(0, 255, 136, 0.2); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #ff4d4d, var(--primary-green));"></div>
+                    <h3 class="text-center" style="margin-bottom: 30px; letter-spacing: 1px;">DRASTIC EFFICIENCY GAP</h3>
                     
-                    <div class="vehicle-comparison" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; align-items: center; margin-bottom: 30px;">
-                        <!-- Diesel Card -->
-                        <div class="v-card" style="border: 1px solid rgba(255, 77, 77, 0.2); background: rgba(255, 77, 77, 0.05); padding: 15px; border-radius: 12px; text-align: center;">
-                            <i class="ph-fill ph-truck" style="font-size: 2.5rem; color: #ff4d4d;"></i>
-                            <h4 style="color: #ff4d4d; margin-top: 10px;">Diesel Truck</h4>
-                            <div style="margin-top: 15px; font-size: 0.8rem; color: var(--text-gray);">
-                                <p><strong>Daily CO2:</strong> 20 KG</p>
-                                <p><strong>Noise:</strong> High</p>
-                                <p><strong>Score:</strong> 1/10</p>
+                    <div class="drastic-graph" style="display: flex; align-items: flex-end; justify-content: space-around; height: 250px; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 20px; margin-bottom: 30px; position: relative;">
+                        <!-- Diesel Resource Demand -->
+                        <div class="graph-col" style="width: 35%; text-align: center;">
+                            <div style="height: 100%; background: linear-gradient(180deg, #ff4d4d, #b30000); border-radius: 10px 10px 0 0; position: relative; box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);">
+                                <span style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: 800; color: #ff4d4d;">400% Cost</span>
                             </div>
+                            <p style="font-size: 0.8rem; margin-top: 15px; color: var(--text-gray);">Diesel Logistics</p>
                         </div>
+                        
+                        <div style="color: var(--text-gray); font-weight: 900; font-size: 1.5rem; margin-bottom: 80px;">VS</div>
 
-                        <div style="font-weight: 800; color: var(--text-gray); font-size: 1.2rem;">VS</div>
-
-                        <!-- EV Card -->
-                        <div class="v-card" style="border: 1px solid rgba(0, 255, 136, 0.3); background: rgba(0, 255, 136, 0.1); padding: 15px; border-radius: 12px; text-align: center; box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);">
-                            <i class="ph-fill ph-lightning" style="font-size: 2.5rem; color: var(--primary-green);"></i>
-                            <h4 style="color: var(--primary-green); margin-top: 10px;">EV GO Truck</h4>
-                            <div style="margin-top: 15px; font-size: 0.8rem; color: var(--text-gray);">
-                                <p style="color: var(--primary-green);"><strong>Daily CO2:</strong> 0 KG</p>
-                                <p style="color: var(--primary-green);"><strong>Noise:</strong> Silent</p>
-                                <p style="color: var(--primary-green);"><strong>Score:</strong> 10/10</p>
+                        <!-- EV Resource Demand -->
+                        <div class="graph-col" style="width: 35%; text-align: center;">
+                            <div style="height: 25%; background: linear-gradient(180deg, var(--primary-green), #00a35c); border-radius: 10px 10px 0 0; position: relative; box-shadow: 0 0 25px rgba(0, 255, 136, 0.4); border: 2px solid #fff;">
+                                <span style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: 800; color: var(--primary-green);">100% Efficiency</span>
                             </div>
+                            <p style="font-size: 0.8rem; margin-top: 15px; color: var(--primary-green); font-weight: 600;">EV GO MOVERS</p>
                         </div>
                     </div>
 
-                    <div class="cost-comparison" style="margin-top: 30px; background: rgba(10, 25, 47, 0.5); padding: 20px; border-radius: 15px; border: 1px solid var(--glass-border);">
-                        <h4 class="text-center" style="margin-bottom: 15px; font-size: 1rem; color: var(--text-gray);">DAILY FLEET RUNNING COST (100 EVs)</h4>
-                        <div style="display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: flex-end; height: 100px; padding: 10px 0;">
-                             <div style="height: 100%; background: #ff4d4d; border-radius: 5px; opacity: 0.8;"></div>
-                             <p style="font-size: 0.8rem;">₹80,000 (Diesel)</p>
-                             <div style="height: 25%; background: var(--primary-green); border-radius: 5px;"></div>
-                             <p style="font-size: 0.8rem;">₹20,000 (EV GO)</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; text-align: center; border: 1px solid var(--glass-border);">
+                            <p style="font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase;">Daily CO2 Savings</p>
+                            <h4 style="color: var(--primary-green); font-size: 1.5rem;">2,000 KG</h4>
                         </div>
-                        <div style="margin-top: 20px; text-align: center;">
-                             <p style="font-size: 0.9rem; color: var(--primary-green); font-weight: 600;">75% OPERATIONAL SAVINGS</p>
-                        </div>
-                    </div>
-
-                    <div class="fleet-scale" style="margin-top: 20px; background: rgba(0, 255, 136, 0.05); padding: 20px; border-radius: 15px; border: 1px dashed var(--primary-green); text-align: center;">
-                        <p style="font-size: 0.85rem; color: var(--text-gray); text-transform: uppercase;">Annual Fleet Impact</p>
-                        <h3 class="text-green" style="font-size: 2rem; margin: 10px 0;">₹2.19 Crore</h3>
-                        <p style="color: var(--text-gray); font-size: 0.9rem;">Estimated annual fuel cost savings for our clients.</p>
-                        <hr style="margin: 15px 0; border: none; border-top: 1px solid var(--glass-border);">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                           <i class="ph-fill ph-check-circle" style="color: var(--primary-green);"></i>
-                           <p style="font-size: 0.8rem;">Sustainable Planet. Superior Profits.</p>
+                        <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; text-align: center; border: 1px solid var(--glass-border);">
+                            <p style="font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase;">Daily Cash Savings</p>
+                            <h4 style="color: #4cc9f0; font-size: 1.5rem;">₹60,000</h4>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Annual Impact Banner -->
+        <div class="glass" style="margin-top: 50px; padding: 40px; text-align: center; border: 2px solid var(--primary-green);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">The Power of One Fleet</h2>
+            <p style="color: var(--text-gray); max-width: 800px; margin: 0 auto 30px;">In just one year, our standard 100-vehicle fleet prevents 730 Tons of CO2 emissions and saves ₹2.19 Crore in operational fuel waste.</p>
+            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                 <div style="text-align: center;">
+                    <i class="ph-fill ph-tree" style="font-size: 3rem; color: var(--primary-green);"></i>
+                    <h3 style="margin-top: 10px;">35,000+</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-gray);">Trees Planted Equivalent</p>
+                 </div>
+                 <div style="text-align: center;">
+                    <i class="ph-fill ph-coins" style="font-size: 3rem; color: #ffd700;"></i>
+                    <h3 style="margin-top: 10px;">₹2,19,00,000</h3>
+                    <p style="font-size: 0.8rem; color: var(--text-gray);">Operational Wealth Gained</p>
+                 </div>
             </div>
         </div>
       `
