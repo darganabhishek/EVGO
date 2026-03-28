@@ -240,13 +240,27 @@ const pages = [
                         </div>
                     </div>
 
-                    <div class="savings-card text-center" style="padding: 20px; border: 1px dashed var(--primary-green); border-radius: 15px;">
+                    <div class="savings-card text-center" style="padding: 20px; border: 1px dashed var(--primary-green); border-radius: 15px; margin-bottom: 20px;">
                         <h3 class="text-green" style="font-size: 2rem;">730 TONS</h3>
                         <p style="color:var(--text-gray);">CO2 Saved Annually</p>
                         <hr style="margin: 15px 0; border: none; border-top: 1px solid var(--glass-border);">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
                             <i class="ph-fill ph-tree" style="font-size: 2rem; color: #2ecc71;"></i>
                             <p style="font-size: 0.9rem;">Equivalent to planting <strong>~35,000</strong> mature trees per year.</p>
+                        </div>
+                    </div>
+
+                    <div class="emissions-chart" style="margin-top: 20px;">
+                        <p class="text-center" style="font-size: 0.8rem; color: var(--text-gray); margin-bottom: 10px;">DAILY CO2 COMPARISON (10,000 km)</p>
+                        <div class="chart-container" style="display: flex; align-items: flex-end; justify-content: space-around; height: 120px; background: rgba(0,0,0,0.2); border-radius: 10px; padding: 10px;">
+                            <div class="chart-bar-group" style="text-align: center; width: 40%;">
+                                <div class="chart-bar" style="height: 100%; background: #ff4d4d; width: 100%; border-radius: 5px; transition: height 1s ease 0.5s;"></div>
+                                <p style="font-size: 0.75rem; margin-top: 5px;">Diesel (2000kg)</p>
+                            </div>
+                            <div class="chart-bar-group" style="text-align: center; width: 40%;">
+                                <div class="chart-bar" style="height: 5%; background: var(--primary-green); width: 100%; border-radius: 5px; transition: height 1s ease 0.5s;"></div>
+                                <p style="font-size: 0.75rem; margin-top: 5px;">EV (0kg Tailpipe)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
