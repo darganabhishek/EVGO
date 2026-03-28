@@ -224,43 +224,42 @@ const pages = [
             </div>
             <div class="reveal-right">
                 <div class="impact-comparison glass" style="padding: 30px;">
-                    <h3 class="text-center" style="margin-bottom: 20px;">Sustainability Impact</h3>
-                    <div class="comparison-scenario" style="background: rgba(0, 255, 136, 0.05); padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.9rem;">
-                        <strong>Scenario:</strong> 100 Vehicles running 100km daily
-                    </div>
+                    <h3 class="text-center" style="margin-bottom: 25px;">Unique Comparison</h3>
                     
-                    <div class="comparison-row" style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px;">
-                        <div>
-                           <p style="color:var(--text-gray); font-size: 0.85rem;">Daily CO2 (Diesel)</p>
-                           <h4 style="color: #ff4d4d; font-size: 1.5rem;">2,000 KG</h4>
+                    <div class="vehicle-comparison" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; align-items: center; margin-bottom: 30px;">
+                        <!-- Diesel Card -->
+                        <div class="v-card" style="border: 1px solid rgba(255, 77, 77, 0.2); background: rgba(255, 77, 77, 0.05); padding: 15px; border-radius: 12px; text-align: center;">
+                            <i class="ph-fill ph-truck" style="font-size: 2.5rem; color: #ff4d4d;"></i>
+                            <h4 style="color: #ff4d4d; margin-top: 10px;">Diesel Truck</h4>
+                            <div style="margin-top: 15px; font-size: 0.8rem; color: var(--text-gray);">
+                                <p><strong>Daily CO2:</strong> 20 KG</p>
+                                <p><strong>Noise:</strong> High</p>
+                                <p><strong>Score:</strong> 1/10</p>
+                            </div>
                         </div>
-                        <div style="text-align: right;">
-                           <p style="color:var(--text-gray); font-size: 0.85rem;">Daily CO2 (EV)</p>
-                           <h4 style="color: var(--primary-green); font-size: 1.5rem;">0 KG</h4>
+
+                        <div style="font-weight: 800; color: var(--text-gray); font-size: 1.2rem;">VS</div>
+
+                        <!-- EV Card -->
+                        <div class="v-card" style="border: 1px solid rgba(0, 255, 136, 0.3); background: rgba(0, 255, 136, 0.1); padding: 15px; border-radius: 12px; text-align: center; box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);">
+                            <i class="ph-fill ph-lightning" style="font-size: 2.5rem; color: var(--primary-green);"></i>
+                            <h4 style="color: var(--primary-green); margin-top: 10px;">EV GO Truck</h4>
+                            <div style="margin-top: 15px; font-size: 0.8rem; color: var(--text-gray);">
+                                <p style="color: var(--primary-green);"><strong>Daily CO2:</strong> 0 KG</p>
+                                <p style="color: var(--primary-green);"><strong>Noise:</strong> Silent</p>
+                                <p style="color: var(--primary-green);"><strong>Score:</strong> 10/10</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="savings-card text-center" style="padding: 20px; border: 1px dashed var(--primary-green); border-radius: 15px; margin-bottom: 20px;">
-                        <h3 class="text-green" style="font-size: 2rem;">730 TONS</h3>
-                        <p style="color:var(--text-gray);">CO2 Saved Annually</p>
+                    <div class="fleet-scale" style="background: rgba(0, 255, 136, 0.05); padding: 20px; border-radius: 15px; border: 1px dashed var(--primary-green); text-align: center;">
+                        <p style="font-size: 0.85rem; color: var(--text-gray); text-transform: uppercase;">Scale to 100 Vehicles (Weekly)</p>
+                        <h3 class="text-green" style="font-size: 2rem; margin: 10px 0;">14,000 KG</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">Total CO2 saved from entering our air every single week.</p>
                         <hr style="margin: 15px 0; border: none; border-top: 1px solid var(--glass-border);">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                            <i class="ph-fill ph-tree" style="font-size: 2rem; color: #2ecc71;"></i>
-                            <p style="font-size: 0.9rem;">Equivalent to planting <strong>~35,000</strong> mature trees per year.</p>
-                        </div>
-                    </div>
-
-                    <div class="emissions-chart" style="margin-top: 20px;">
-                        <p class="text-center" style="font-size: 0.8rem; color: var(--text-gray); margin-bottom: 10px;">DAILY CO2 COMPARISON (10,000 km)</p>
-                        <div class="chart-container" style="display: flex; align-items: flex-end; justify-content: space-around; height: 120px; background: rgba(0,0,0,0.2); border-radius: 10px; padding: 10px;">
-                            <div class="chart-bar-group" style="text-align: center; width: 40%;">
-                                <div class="chart-bar" style="height: 100%; background: #ff4d4d; width: 100%; border-radius: 5px; transition: height 1s ease 0.5s;"></div>
-                                <p style="font-size: 0.75rem; margin-top: 5px;">Diesel (2000kg)</p>
-                            </div>
-                            <div class="chart-bar-group" style="text-align: center; width: 40%;">
-                                <div class="chart-bar" style="height: 5%; background: var(--primary-green); width: 100%; border-radius: 5px; transition: height 1s ease 0.5s;"></div>
-                                <p style="font-size: 0.75rem; margin-top: 5px;">EV (0kg Tailpipe)</p>
-                            </div>
+                           <i class="ph-fill ph-check-circle" style="color: var(--primary-green);"></i>
+                           <p style="font-size: 0.8rem;">Switching to EV GO = 100% Cleaner Future.</p>
                         </div>
                     </div>
                 </div>
