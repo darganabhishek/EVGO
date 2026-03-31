@@ -15,7 +15,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.0.8" />
+    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.0.9" />
     <style>
       .page-header {
         padding-top: 140px;
