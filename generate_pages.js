@@ -8,7 +8,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${title} | EV GO MOVERS</title>
-    <meta name="description" content="EV GO MOVERS – India’s Leading Electric Moving & Logistics Solutions Provider. Eco-Friendly, Reliable & Affordable Moving and Logistics Solutions." />
+    <meta name="description" content="EV GO MOVERS – India's Leading Electric Moving & Logistics Solutions Provider. Eco-Friendly, Reliable & Affordable Moving and Logistics Solutions." />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -325,7 +325,7 @@ const pages = [
             <div class="faq-content">Our 24/7 support center and on-ground fleet supervisors ensure every shipment is monitored and contingencies are handled immediately.</div>
          </div>
          <div class="faq-item">
-            <button class="faq-header">What's your cost advantage? <i class="ph ph-caret-down faq-icon"></i></button>
+            <button class="faq-header">What's your cost advantage? <i class="ph ph-caret-down_icon"></i></button>
             <div class="faq-content">By eliminating fuel surcharges and optimizing routes through AI, we provide significantly lower operational costs for our clients.</div>
          </div>
       </div>
@@ -398,7 +398,7 @@ const pages = [
         <div class="grid-2 align-start" style="align-items: flex-start;">
             <div class="reveal-left" style="max-width: 95%;">
                 <h2 class="section-title">The EV <span class="text-green">Revolution</span></h2>
-                <p style="color: var(--text-gray); margin-bottom: 25px; font-size: 1.1rem;">EV GO MOVERS isn’t just changing how you move; we are redefining the efficiency of Indian logistics. By replacing fuel-heavy transport with a high-performance electric fleet, we ensure:</p>
+                <p style="color: var(--text-gray); margin-bottom: 25px; font-size: 1.1rem;">EV GO MOVERS isn't just changing how you move; we are redefining the efficiency of Indian logistics. By replacing fuel-heavy transport with a high-performance electric fleet, we ensure:</p>
                 
                 <ul class="clean-list" style="margin-bottom: 40px; display: flex; flex-direction: column; gap: 15px;">
                     <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;"><i class="ph-fill ph-leaf text-green" style="font-size: 1.4rem;"></i> Cleaner logistics & zero pollution</li>
@@ -502,7 +502,7 @@ const pages = [
                         <i class="ph-fill ph-certificate" style="font-size: 1.5rem; color: var(--primary-green);"></i>
                     </div>
                     <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Eco-Friendly Compliance</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Accelerate your company’s Net Zero targets perfectly aligning with immediate government standards.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Accelerate your company's Net Zero targets perfectly aligning with immediate government standards.</p>
                 </div>
                 
                 <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
