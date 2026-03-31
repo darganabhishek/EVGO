@@ -2326,7 +2326,7 @@ textarea::placeholder {
 }
 
 .service-feature-list li::before {
-  content: '•';
+  content: 'ï¿½';
   color: var(--primary-green);
   font-weight: bold;
   font-size: 1.2rem;
