@@ -191,7 +191,13 @@ svg {
 .logo-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
+}
+
+.logo-wrapper img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .logo-text {
@@ -201,9 +207,16 @@ svg {
   color: var(--white);
   letter-spacing: 1px;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
+  .logo-wrapper {
+    gap: 10px;
+  }
+  .logo-wrapper img {
+    height: 38px;
+  }
   .logo-text {
     font-size: 1.4rem;
   }
