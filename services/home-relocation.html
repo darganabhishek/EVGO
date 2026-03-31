@@ -164,6 +164,21 @@
            counters.forEach(counter => counterObserver.observe(counter));
        }
 
+       // FAQ Toggle Handler
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                if(!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
        // Form Submission Handler
        const contactForm = document.getElementById('contactForm');
        if(contactForm) {

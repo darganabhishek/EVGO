@@ -2021,3 +2021,217 @@ textarea::placeholder {
     padding: 20px !important;
   }
 }
+
+/* About Page Specific Styles */
+.about-hero {
+  padding: 100px 0 60px;
+  background: radial-gradient(circle at top right, rgba(0, 255, 136, 0.05), transparent 40%);
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.about-image-frame {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.about-features-list {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.about-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.about-features-list i {
+  color: var(--primary-green);
+  font-size: 1.2rem;
+}
+
+/* Pillar Cards */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.pillar-card {
+  text-align: center;
+  padding: 40px 30px;
+  transition: var(--transition);
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+.pillar-icon {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+}
+
+/* Journey Section */
+.journey-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.journey-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--primary-blue);
+}
+
+.journey-year {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin-bottom: 5px;
+}
+
+.journey-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Team Section */
+.team-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto 100px;
+}
+
+.team-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.team-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.9), transparent);
+  text-align: center;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.team-title {
+  font-size: 0.85rem;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+/* FAQ Accordion */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto 100px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.faq-header {
+  width: 100%;
+  padding: 20px;
+  background: var(--glass-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  transition: var(--transition);
+}
+
+.faq-header:hover, .faq-item.active .faq-header {
+  background: rgba(0, 255, 136, 0.1);
+  color: var(--primary-green);
+}
+
+.faq-content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: rgba(255,255,255,0.02);
+  color: var(--text-gray);
+  font-size: 0.95rem;
+}
+
+.faq-item.active .faq-content {
+  padding: 20px;
+  max-height: 500px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 992px) {
+  .about-intro-grid, .journey-container, .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
