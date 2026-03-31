@@ -50,7 +50,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
           <li><a href="/contact.html">Contact</a></li>
         </ul>
         <div class="nav-actions">
-            <a href="/contact.html" class="btn btn-primary small animate-pulse">JOIN US</a>
+            <a href="/contact.html" class="btn btn-primary small">Get Quote</a>
              <button class="mobile-menu-btn" aria-label="Menu">
             <i class="ph ph-list"></i>
           </button>
@@ -60,7 +60,8 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
 
     <header class="page-header">
       <div class="container">
-        <h1 class="fade-in-up">${title}</h1>
+        <div class="breadcrumbs"><a href="/">Home</a> <span>/</span> ${title}</div>
+        <h1 class="fade-in-up" style="font-size: 3rem; margin-top: 10px;">${title === 'Services' ? 'Our Electric Movers & Logistics Services' : title}</h1>
         ${heroCta}
       </div>
     </header>
@@ -75,7 +76,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <div class="container footer-content">
       <div class="footer-col">
         <div class="logo-wrapper" style="margin-bottom: 20px;">
-          <img src="/images/ev-go-logo.png" alt="EV GO Logo" style="height: 45px;">
+          <img src="/images/ev-go-logo.png" alt="EV GO Logo" style="height: 55px;">
           <span class="logo-text">MOVERS</span>
         </div>
         <p>India's Leading Electric Moving & Logistics Solutions Provider.</p>
@@ -94,14 +95,13 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
         <h4>Contact</h4>
         <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
         <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
-        <p><i class="ph-fill ph-map-pin"></i> Corporate office - Gurugram</p>
-        <p><i class="ph-fill ph-map-pin"></i> Registered office - Pitampura</p>
+        <p><i class="ph-fill ph-map-pin"></i> Pitampura, New Delhi</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container footer-bottom-wrapper">
+      <div class="container footer-bottom-wrapper" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
         <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED.</p>
-        <a href="http://www.mdinfo.in" target="_blank" class="mdi-link">DESIGNED AND DEVELOPED BY <span class="mdi-name">M.D. INFOTECH</span></a>
+        <a href="http://www.mdinfo.in" target="_blank" class="mdi-link">DESIGNED AND DEVELOPED BY <span class="mdi-name" style="color: var(--primary-green); font-weight: 700;">M.D. INFOTECH</span></a>
       </div>
     </div>
   </footer>
@@ -333,12 +333,15 @@ const pages = [
   },
   {
     path: 'services.html',
-    title: 'Our Electric Moving & Logistics Services',
+    title: 'Services',
     content: `
         <div class="services-grid">
           <!-- Card 1: Fleet Services -->
           <div class="service-card glass">
-            <div class="service-card-header">
+            <div class="service-card-header" style="position: relative;">
+              <div style="position: absolute; top: 20px; left: 20px; width: 40px; height: 40px; background: rgba(0, 255, 136, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0,255,136,0.3); border: 1px solid rgba(0,255,136,0.2); z-index: 2;">
+                <i class="ph ph-truck" style="color: var(--primary-green); font-size: 1.2rem;"></i>
+              </div>
               <img src="/images/image.png" alt="Electric Fleet" class="service-card-image">
             </div>
             <div class="service-card-body">
@@ -354,11 +357,14 @@ const pages = [
 
           <!-- Card 2: Last Mile -->
           <div class="service-card glass">
-            <div class="service-card-header">
+            <div class="service-card-header" style="position: relative;">
+               <div style="position: absolute; top: 20px; left: 20px; width: 40px; height: 40px; background: rgba(0, 255, 136, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0,255,136,0.3); border: 1px solid rgba(0,255,136,0.2); z-index: 2;">
+                <i class="ph ph-shopping-cart" style="color: var(--primary-green); font-size: 1.2rem;"></i>
+              </div>
               <img src="/images/last-mile.png" alt="Last Mile Delivery" class="service-card-image">
             </div>
             <div class="service-card-body">
-              <h3>Electrifying Last-Mile Delivery</h3>
+              <h3>Electrifying Last- Mile Delivery</h3>
               <ul class="service-feature-list">
                 <li>Ensure fast and eco-friendly deliveries across urban zones.</li>
                 <li>Track orders in real-time with 24/7 support access.</li>
@@ -370,7 +376,10 @@ const pages = [
 
           <!-- Card 3: Logistics Management -->
           <div class="service-card glass">
-            <div class="service-card-header">
+            <div class="service-card-header" style="position: relative;">
+               <div style="position: absolute; top: 20px; left: 20px; width: 40px; height: 40px; background: rgba(0, 255, 136, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0,255,136,0.3); border: 1px solid rgba(0,255,136,0.2); z-index: 2;">
+                <i class="ph ph-chart-line-up" style="color: var(--primary-green); font-size: 1.2rem;"></i>
+              </div>
               <img src="/images/logistics.png" alt="Logistics Management" class="service-card-image">
             </div>
             <div class="service-card-body">
