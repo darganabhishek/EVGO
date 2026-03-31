@@ -194,13 +194,13 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     </script>
   </body>
 </html>
-\`;
+`;
 
 const pages = [
   {
     path: 'about.html',
     title: 'About EV GO MOVERS – Smart Electric Logistics Company',
-    content: \`
+    content: `
       <!-- Intro Section -->
       <div class="about-intro-grid">
         <div class="reveal-left">
@@ -325,16 +325,16 @@ const pages = [
             <div class="faq-content">Our 24/7 support center and on-ground fleet supervisors ensure every shipment is monitored and contingencies are handled immediately.</div>
          </div>
          <div class="faq-item">
-            <button class="faq-header">What's your cost advantage? <i class="ph ph-caret-down_icon"></i></button>
+            <button class="faq-header">What's your cost advantage? <i class="ph ph-caret-down faq-icon"></i></button>
             <div class="faq-content">By eliminating fuel surcharges and optimizing routes through AI, we provide significantly lower operational costs for our clients.</div>
          </div>
       </div>
-    \`
+    `
   },
   {
     path: 'services.html',
     title: 'Our Electric Moving & Logistics Services',
-    content: \`
+    content: `
         <div class="services-grid">
           <!-- Card 1: Fleet Services -->
           <div class="service-card glass">
@@ -388,13 +388,13 @@ const pages = [
         <div class="text-center" style="margin-top:60px;">
             <a href="/contact.html" class="btn btn-primary glow">Get a Free Quote Now</a>
         </div>
-    \`
+    `
   },
   {
     path: 'sustainability.html',
     title: 'Eco-Friendly Movers Driving Sustainable Logistics',
     heroCta: \`<div style="margin-top: 40px;"><a href="/contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);">Start Saving Today</a></div>\`,
-    content: \`
+    content: `
         <div class="grid-2 align-start" style="align-items: flex-start;">
             <div class="reveal-left" style="max-width: 95%;">
                 <h2 class="section-title">The EV <span class="text-green">Revolution</span></h2>
@@ -518,12 +518,12 @@ const pages = [
                 <a href="/contact.html" class="btn btn-outline" style="padding: 12px 30px;">Speak to a Logistics Expert</a>
             </div>
         </div>
-      \`
+      `
   },
   {
     path: 'contact.html',
     title: 'Contact Us',
-    content: \`
+    content: `
         <div class="grid-2">
             <div>
                  <h3>EV GO MOVERS LOGISTICS INDIA PVT. LTD.</h3>
@@ -559,30 +559,30 @@ const pages = [
                 </form>
             </div>
         </div>
-      \`
+      `
   },
   {
     path: 'services/home-relocation.html',
     title: 'Home Relocation Services',
-    content: \`<p>Our electric home relocation services ensure safe packing, careful handling, and smooth transportation of household goods using eco-friendly vehicles.</p>\`,
+    content: '<p>Our electric home relocation services ensure safe packing, careful handling, and smooth transportation of household goods using eco-friendly vehicles.</p>',
     isSubdir: true
   },
   {
     path: 'services/office-relocation.html',
     title: 'Office Relocation Services',
-    content: \`<p>We specialize in office shifting with minimal downtime, secure equipment handling, and professional coordination.</p>\`,
+    content: '<p>We specialize in office shifting with minimal downtime, secure equipment handling, and professional coordination.</p>',
     isSubdir: true
   },
   {
     path: 'services/ev-logistics.html',
     title: 'Electric Vehicle Logistics',
-    content: \`<p>Custom EV logistics models for businesses looking to reduce delivery costs and carbon footprint.</p>\`,
+    content: '<p>Custom EV logistics models for businesses looking to reduce delivery costs and carbon footprint.</p>',
     isSubdir: true
   },
   {
     path: 'services/intercity-moves.html',
     title: 'Local & Intercity Moving',
-    content: \`<p>Reliable and affordable transportation for short and long distances with electric vehicles.</p>\`,
+    content: '<p>Reliable and affordable transportation for short and long distances with electric vehicles.</p>',
     isSubdir: true
   }
 ];
