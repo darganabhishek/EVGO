@@ -572,7 +572,7 @@ svg {
 }
 
 .service-card li::before {
-  content: "•";
+  content: "\2022";
   color: var(--primary-green);
   font-size: 1.8rem;
   line-height: 1;
@@ -895,7 +895,7 @@ footer {
 }
 
 .trust-item::before {
-  content: "•";
+  content: "\2022";
   color: var(--primary-green);
   font-size: 1.5rem;
   line-height: 1;
@@ -2092,7 +2092,7 @@ textarea::placeholder {
 }
 
 .about-features-list li::before {
-  content: "•";
+  content: "\2022";
   color: var(--primary-green);
   font-size: 1.5rem;
   line-height: 1;
