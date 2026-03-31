@@ -344,29 +344,52 @@ const pages = [
     title: 'Our Electric Moving & Logistics Services',
     content: `
         <div class="services-grid">
+          <!-- Card 1: Fleet Services -->
           <div class="service-card glass">
-            <i class="ph-fill ph-house-line service-icon"></i>
-            <h3>Home Relocation Services</h3>
-            <p>Our electric home relocation services ensure safe packing, careful handling, and smooth transportation of household goods using eco-friendly vehicles.</p>
-            <a href="/services/home-relocation.html" class="link-arrow">Learn more <i class="ph ph-arrow-right"></i></a>
+            <div class="service-card-header">
+              <img src="/images/image.png" alt="Electric Fleet">
+            </div>
+            <div class="service-card-body">
+              <h3>Electric Fleet Services</h3>
+              <ul class="service-feature-list">
+                <li>Lease 2W, 3W, and 4W electric vehicles for diverse industries.</li>
+                <li>Customize contracts to suit your operational needs.</li>
+                <li>Enjoy complete vehicle maintenance and support services.</li>
+                <li>Reduce costs and emissions with India's smartest EV fleet.</li>
+              </ul>
+            </div>
           </div>
+
+          <!-- Card 2: Last Mile -->
           <div class="service-card glass">
-            <i class="ph-fill ph-buildings service-icon"></i>
-            <h3>Office Relocation Services</h3>
-            <p>We specialize in office shifting with minimal downtime, secure equipment handling, and professional coordination.</p>
-            <a href="/services/office-relocation.html" class="link-arrow">Learn more <i class="ph ph-arrow-right"></i></a>
+            <div class="service-card-header">
+              <img src="/images/last-mile.png" alt="Last Mile Delivery">
+            </div>
+            <div class="service-card-body">
+              <h3>Electrifying Last-Mile Delivery</h3>
+              <ul class="service-feature-list">
+                <li>Ensure fast and eco-friendly deliveries across urban zones.</li>
+                <li>Track orders in real-time with 24/7 support access.</li>
+                <li>Achieve reliable, zero-emission delivery drop-offs.</li>
+                <li>Contribute to cleaner cities through electric mobility.</li>
+              </ul>
+            </div>
           </div>
-           <div class="service-card glass">
-            <i class="ph-fill ph-truck service-icon"></i>
-            <h3>Local & Intercity Moving</h3>
-            <p>Reliable and affordable transportation for short and long distances with electric vehicles.</p>
-            <a href="/services/intercity-moves.html" class="link-arrow">Learn more <i class="ph ph-arrow-right"></i></a>
-          </div>
-           <div class="service-card glass">
-            <i class="ph-fill ph-lightning service-icon"></i>
-            <h3>Electric Vehicle Logistics</h3>
-            <p>Custom EV logistics models for businesses looking to reduce delivery costs and carbon footprint.</p>
-            <a href="/services/ev-logistics.html" class="link-arrow">Learn more <i class="ph ph-arrow-right"></i></a>
+
+          <!-- Card 3: Logistics Management -->
+          <div class="service-card glass">
+            <div class="service-card-header">
+              <img src="/images/logistics.png" alt="Logistics Management">
+            </div>
+            <div class="service-card-body">
+              <h3>Logistics Management</h3>
+              <ul class="service-feature-list">
+                <li>Use AI-powered dashboards for smart logistics control.</li>
+                <li>Optimize routes with predictive analytics and insights.</li>
+                <li>Manage performance with real-time data intelligence.</li>
+                <li>Scale operations via our urban mobility tech platform.</li>
+              </ul>
+            </div>
           </div>
         </div>
         
