@@ -393,7 +393,7 @@ const pages = [
   {
     path: 'sustainability.html',
     title: 'Eco-Friendly Movers Driving Sustainable Logistics',
-    heroCta: \`<div style="margin-top: 40px;"><a href="/contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);">Start Saving Today</a></div>\`,
+    heroCta: '<div style="margin-top: 40px;"><a href="/contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);">Start Saving Today</a></div>',
     content: `
         <div class="grid-2 align-start" style="align-items: flex-start;">
             <div class="reveal-left" style="max-width: 95%;">
