@@ -2310,6 +2310,7 @@ textarea::placeholder {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .service-card:hover {
@@ -2337,20 +2338,22 @@ textarea::placeholder {
 .service-card-body h3 {
   font-size: 1.5rem;
   color: var(--white);
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   position: relative;
   display: inline-block;
+  text-align: left;
+  width: 100%;
 }
 
 .service-card-body h3::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -12px;
   left: 0;
   width: 40px;
-  height: 3px;
+  height: 4px;
   background: var(--primary-green);
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .service-feature-list {
@@ -2366,11 +2369,19 @@ textarea::placeholder {
   color: var(--text-gray);
   font-size: 0.95rem;
   line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
 }
 
 .service-feature-list li::before {
-  content: '�';
-  color: var(--primary-green);
-  font-weight: bold;
-  font-size: 1.2rem;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
 }
