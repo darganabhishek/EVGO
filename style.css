@@ -554,26 +554,31 @@ svg {
 
 .service-card ul {
   text-align: left;
-  margin-top: 15px;
-  padding-left: 10px;
+  margin-top: 35px;
+  padding-left: 15%; /* Indent list to center the block visually */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
 
 .service-card li {
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 10px;
+  padding-left: 25px;
   color: var(--text-gray);
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style: none;
 }
 
 .service-card li::before {
   content: "•";
   color: var(--primary-green);
-  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -4px;
 }
 
 .link-arrow {
