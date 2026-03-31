@@ -15,7 +15,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.0.6" />
+    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.0.7" />
     <style>
       .page-header {
         padding-top: 140px;
@@ -50,7 +50,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
           <li><a href="/contact.html">Contact</a></li>
         </ul>
         <div class="nav-actions">
-            <a href="/contact.html" class="btn btn-primary small">Get Quote</a>
+            <a href="/contact.html" class="btn btn-primary small">Join Us</a>
              <button class="mobile-menu-btn" aria-label="Menu">
             <i class="ph ph-list"></i>
           </button>
