@@ -78,7 +78,6 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
             <img src="/images/ev-go-logo.png" alt="EV GO" style="height: 45px;">
             <span class="logo-text">MOVERS</span>
           </div>
-          <h3>EV GO MOVERS</h3>
           <p>India's Leading Electric Moving & Logistics Solutions Provider.</p>
           <div class="social-links">
              <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
