@@ -210,10 +210,10 @@ const pages = [
           <p class="text-gray">At EV Go Movers Logistics India Pvt. Ltd., we're not just transforming how India moves - we're leading the charge into a smarter, greener tomorrow.</p>
           
           <ul class="about-features-list">
-             <li><i class="ph-fill ph-check-circle"></i> Powered by 100% electric vehicles.</li>
-             <li><i class="ph-fill ph-check-circle"></i> Led by global experts in sustainable logistics.</li>
-             <li><i class="ph-fill ph-check-circle"></i> AI-based route planning and fleet control.</li>
-             <li><i class="ph-fill ph-check-circle"></i> Committed to Indian net-zero emission goals.</li>
+             <li>Powered by 100% electric vehicles.</li>
+             <li>Led by global experts in sustainable logistics.</li>
+             <li>AI-based route planning and fleet control.</li>
+             <li>Committed to Indian net-zero emission goals.</li>
           </ul>
         </div>
         <div class="reveal-right about-image-frame">
@@ -339,15 +339,15 @@ const pages = [
           <!-- Card 1: Fleet Services -->
           <div class="service-card glass">
             <div class="service-card-header">
-              <img src="/images/image.png" alt="Electric Fleet">
+              <img src="/images/image.png" alt="Electric Fleet" class="service-card-image">
             </div>
             <div class="service-card-body">
               <h3>Electric Fleet Services</h3>
               <ul class="service-feature-list">
-                <li><i class="ph-fill ph-check-circle"></i> Lease 2W, 3W, and 4W electric vehicles for diverse industries.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Customize contracts to suit your operational needs.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Enjoy complete vehicle maintenance and support services.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Reduce costs and emissions with India's smartest EV fleet.</li>
+                <li>Lease 2W, 3W, and 4W electric vehicles for diverse industries.</li>
+                <li>Customize contracts to suit your operational needs.</li>
+                <li>Enjoy complete vehicle maintenance and support services.</li>
+                <li>Reduce costs and emissions with India's smartest EV fleet.</li>
               </ul>
             </div>
           </div>
@@ -355,15 +355,15 @@ const pages = [
           <!-- Card 2: Last Mile -->
           <div class="service-card glass">
             <div class="service-card-header">
-              <img src="/images/last-mile.png" alt="Last Mile Delivery">
+              <img src="/images/last-mile.png" alt="Last Mile Delivery" class="service-card-image">
             </div>
             <div class="service-card-body">
               <h3>Electrifying Last-Mile Delivery</h3>
               <ul class="service-feature-list">
-                <li><i class="ph-fill ph-check-circle"></i> Ensure fast and eco-friendly deliveries across urban zones.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Track orders in real-time with 24/7 support access.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Achieve reliable, zero-emission delivery drop-offs.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Contribute to cleaner cities through electric mobility.</li>
+                <li>Ensure fast and eco-friendly deliveries across urban zones.</li>
+                <li>Track orders in real-time with 24/7 support access.</li>
+                <li>Achieve reliable, zero-emission delivery drop-offs.</li>
+                <li>Contribute to cleaner cities through electric mobility.</li>
               </ul>
             </div>
           </div>
@@ -371,15 +371,15 @@ const pages = [
           <!-- Card 3: Logistics Management -->
           <div class="service-card glass">
             <div class="service-card-header">
-              <img src="/images/logistics.png" alt="Logistics Management">
+              <img src="/images/logistics.png" alt="Logistics Management" class="service-card-image">
             </div>
             <div class="service-card-body">
               <h3>Logistics Management</h3>
               <ul class="service-feature-list">
-                <li><i class="ph-fill ph-check-circle"></i> Use AI-powered dashboards for smart logistics control.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Optimize routes with predictive analytics and insights.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Manage performance with real-time data intelligence.</li>
-                <li><i class="ph-fill ph-check-circle"></i> Scale operations via our urban mobility tech platform.</li>
+                <li>Use AI-powered dashboards for smart logistics control.</li>
+                <li>Optimize routes with predictive analytics and insights.</li>
+                <li>Manage performance with real-time data intelligence.</li>
+                <li>Scale operations via our urban mobility tech platform.</li>
               </ul>
             </div>
           </div>
