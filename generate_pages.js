@@ -39,7 +39,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <nav class="navbar" id="navbar">
       <div class="container nav-container">
         <a href="/" class="logo-wrapper">
-          <img src="/images/ev-go-logo.png" alt="EV GO" style="height: 48px;">
+          <img src="/images/ev-go-logo.png" alt="EV GO Logo" style="height: 48px;">
           <span class="logo-text">MOVERS</span>
         </a>
         <ul class="nav-links">
@@ -71,48 +71,40 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
       </div>
     </section>
 
-    <footer>
-      <div class="container footer-content">
-        <div class="footer-col">
-          <div class="logo-wrapper" style="margin-bottom: 20px;">
-            <img src="/images/ev-go-logo.png" alt="EV GO" style="height: 45px;">
-            <span class="logo-text">MOVERS</span>
-          </div>
-          <p>India's Leading Electric Moving & Logistics Solutions Provider.</p>
-          <div class="social-links">
-             <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
-             <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
-             <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
-          </div>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="logo-wrapper" style="margin-bottom: 20px;">
+          <img src="/images/ev-go-logo.png" alt="EV GO Logo" style="height: 45px;">
+          <span class="logo-text">MOVERS</span>
         </div>
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <a href="/">Home</a>
-            <a href="/about.html">About Us</a>
-            <a href="/services.html">Services</a>
-            <a href="/contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-            <h4>Services</h4>
-            <a href="/services/home-relocation.html">Home Relocation</a>
-            <a href="/services/office-relocation.html">Office Shifting</a>
-            <a href="/services/ev-logistics.html">EV Logistics</a>
-        </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
-            <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
-            <p><i class="ph-fill ph-map-pin"></i> Corporate office - Gurugram</p>
-            <p><i class="ph-fill ph-map-pin"></i> Registered office - Pitampura</p>
+        <p>India’s Leading Electric Moving & Logistics Solutions Provider.</p>
+        <div class="social-links">
+          <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+          <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
         </div>
       </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/services.html">Electric Fleet Services</a>
+        <a href="/services.html">Last-Mile Delivery</a>
+        <a href="/services.html">Logistics Management</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
+        <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
+        <p><i class="ph-fill ph-map-pin"></i> Corporate office - Gurugram</p>
+        <p><i class="ph-fill ph-map-pin"></i> Registered office - Pitampura</p>
+      </div>
+    </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-wrapper">
         <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED.</p>
         <a href="http://www.mdinfo.in" target="_blank" class="mdi-link">DESIGNED AND DEVELOPED BY <span class="mdi-name">M.D. INFOTECH</span></a>
       </div>
     </div>
-    </footer>
+  </footer>
     <script type="module" src="${isSubdir ? '../' : './'}main.js"></script>
     <script>
        // Simple script to animate charts if present
@@ -202,13 +194,13 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     </script>
   </body>
 </html>
-`;
+\`;
 
 const pages = [
   {
     path: 'about.html',
     title: 'About EV GO MOVERS – Smart Electric Logistics Company',
-    content: `
+    content: \`
       <!-- Intro Section -->
       <div class="about-intro-grid">
         <div class="reveal-left">
@@ -337,12 +329,12 @@ const pages = [
             <div class="faq-content">By eliminating fuel surcharges and optimizing routes through AI, we provide significantly lower operational costs for our clients.</div>
          </div>
       </div>
-    `
+    \`
   },
   {
     path: 'services.html',
     title: 'Our Electric Moving & Logistics Services',
-    content: `
+    content: \`
         <div class="services-grid">
           <!-- Card 1: Fleet Services -->
           <div class="service-card glass">
@@ -396,13 +388,13 @@ const pages = [
         <div class="text-center" style="margin-top:60px;">
             <a href="/contact.html" class="btn btn-primary glow">Get a Free Quote Now</a>
         </div>
-    `
+    \`
   },
   {
     path: 'sustainability.html',
     title: 'Eco-Friendly Movers Driving Sustainable Logistics',
-    heroCta: `<div style="margin-top: 40px;"><a href="/contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);">Start Saving Today</a></div>`,
-    content: `
+    heroCta: \`<div style="margin-top: 40px;"><a href="/contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);">Start Saving Today</a></div>\`,
+    content: \`
         <div class="grid-2 align-start" style="align-items: flex-start;">
             <div class="reveal-left" style="max-width: 95%;">
                 <h2 class="section-title">The EV <span class="text-green">Revolution</span></h2>
@@ -497,8 +489,7 @@ const pages = [
                     <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Eliminate fuel surcharges completely. Predictable routing with flat EV rates saves huge costs on scale.</p>
                 </div>
                 
-                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
-                    <div style="width: 50px; height: 50px; background: rgba(76,201,240,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,201,240,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                         <i class="ph-fill ph-rocket-launch" style="font-size: 1.5rem; color: #4cc9f0;"></i>
                     </div>
                     <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Faster Delivery</h4>
@@ -526,12 +517,12 @@ const pages = [
                 <a href="/contact.html" class="btn btn-outline" style="padding: 12px 30px;">Speak to a Logistics Expert</a>
             </div>
         </div>
-      `
+      \`
   },
   {
     path: 'contact.html',
     title: 'Contact Us',
-    content: `
+    content: \`
         <div class="grid-2">
             <div>
                  <h3>EV GO MOVERS LOGISTICS INDIA PVT. LTD.</h3>
@@ -567,30 +558,30 @@ const pages = [
                 </form>
             </div>
         </div>
-      `
+      \`
   },
   {
     path: 'services/home-relocation.html',
     title: 'Home Relocation Services',
-    content: `<p>Our electric home relocation services ensure safe packing, careful handling, and smooth transportation of household goods using eco-friendly vehicles.</p>`,
+    content: \`<p>Our electric home relocation services ensure safe packing, careful handling, and smooth transportation of household goods using eco-friendly vehicles.</p>\`,
     isSubdir: true
   },
   {
     path: 'services/office-relocation.html',
     title: 'Office Relocation Services',
-    content: `<p>We specialize in office shifting with minimal downtime, secure equipment handling, and professional coordination.</p>`,
+    content: \`<p>We specialize in office shifting with minimal downtime, secure equipment handling, and professional coordination.</p>\`,
     isSubdir: true
   },
   {
     path: 'services/ev-logistics.html',
     title: 'Electric Vehicle Logistics',
-    content: `<p>Custom EV logistics models for businesses looking to reduce delivery costs and carbon footprint.</p>`,
+    content: \`<p>Custom EV logistics models for businesses looking to reduce delivery costs and carbon footprint.</p>\`,
     isSubdir: true
   },
   {
     path: 'services/intercity-moves.html',
     title: 'Local & Intercity Moving',
-    content: `<p>Reliable and affordable transportation for short and long distances with electric vehicles.</p>`,
+    content: \`<p>Reliable and affordable transportation for short and long distances with electric vehicles.</p>\`,
     isSubdir: true
   }
 ];
