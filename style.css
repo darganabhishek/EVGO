@@ -2297,7 +2297,7 @@ textarea::placeholder {
 /* Services Page Overhaul */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
@@ -2331,12 +2331,12 @@ textarea::placeholder {
 }
 
 .service-card-body {
-  padding: 30px;
+  padding: 30px 25px;
   flex-grow: 1;
 }
 
 .service-card-body h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--white);
   margin-bottom: 25px;
   position: relative;
