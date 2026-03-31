@@ -78,7 +78,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
           <img src="/images/ev-go-logo.png" alt="EV GO Logo" style="height: 45px;">
           <span class="logo-text">MOVERS</span>
         </div>
-        <p>India’s Leading Electric Moving & Logistics Solutions Provider.</p>
+        <p>India's Leading Electric Moving & Logistics Solutions Provider.</p>
         <div class="social-links">
           <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
           <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
@@ -489,7 +489,8 @@ const pages = [
                     <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Eliminate fuel surcharges completely. Predictable routing with flat EV rates saves huge costs on scale.</p>
                 </div>
                 
-                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,201,240,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(76,201,240,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                         <i class="ph-fill ph-rocket-launch" style="font-size: 1.5rem; color: #4cc9f0;"></i>
                     </div>
                     <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Faster Delivery</h4>
