@@ -8,7 +8,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${title} | EV GO MOVERS</title>
-    <meta name="description" content="EV GO MOVERS – India’s Leading Electric Packers & Movers Company. Eco-Friendly, Reliable & Affordable Moving and Logistics Solutions." />
+    <meta name="description" content="EV GO MOVERS – India’s Leading Electric Moving & Logistics Solutions Provider. Eco-Friendly, Reliable & Affordable Moving and Logistics Solutions." />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,7 +79,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
             <span class="logo-text">MOVERS</span>
           </div>
           <h3>EV GO MOVERS</h3>
-          <p>India's Leading Electric Packers & Movers Company.</p>
+          <p>India's Leading Electric Moving & Logistics Solutions Provider.</p>
           <div class="social-links">
              <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
              <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
@@ -198,7 +198,7 @@ const pages = [
       <div class="grid-2">
         <div class="reveal-left">
           <h2 class="section-title">Smart Electric Logistics</h2>
-          <p class="text-gray">EV GO MOVERS was founded to transform the Indian logistics and packers & movers industry through electric mobility. By combining technology-driven logistics planning with electric vehicles, we help customers move responsibly while maintaining speed, safety, and affordability.</p>
+          <p class="text-gray">EV GO MOVERS was founded to transform the Indian logistics and moving industry through electric mobility. By combining technology-driven logistics planning with electric vehicles, we help customers move responsibly while maintaining speed, safety, and affordability.</p>
           <p class="text-gray" style="margin-top:20px;">We serve individuals, startups, and enterprises looking for eco-friendly transportation alternatives without compromising service quality.</p>
           
           <div style="margin-top: 40px;">
@@ -238,7 +238,7 @@ const pages = [
   },
   {
     path: 'services.html',
-    title: 'Our Electric Movers & Logistics Services',
+    title: 'Our Electric Moving & Logistics Services',
     content: `
         <div class="services-grid">
           <div class="service-card glass">
