@@ -572,13 +572,16 @@ svg {
 }
 
 .service-card li::before {
-  content: "\2022";
-  color: var(--primary-green);
-  font-size: 1.8rem;
-  line-height: 1;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
   position: absolute;
   left: 0;
-  top: -4px;
+  top: 8px;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
 }
 
 .link-arrow {
