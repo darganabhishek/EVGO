@@ -58,6 +58,7 @@
     <header class="page-header">
       <div class="container">
         <h1 class="fade-in-up">Home Relocation Services</h1>
+        
       </div>
     </header>
 
@@ -99,9 +100,12 @@
             <p><i class="ph-fill ph-map-pin"></i> Registered office - Pitampura</p>
         </div>
       </div>
-      <div class="footer-bottom text-center">
-        <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED. All rights reserved.</p>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-wrapper">
+        <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED.</p>
+        <a href="http://www.mdinfo.in" target="_blank" class="mdi-link">DESIGNED AND DEVELOPED BY <span class="mdi-name">M.D. INFOTECH</span></a>
       </div>
+    </div>
     </footer>
     <script type="module" src="../main.js"></script>
     <script>
@@ -117,6 +121,62 @@
                });
            });
            bars.forEach(bar => observer.observe(bar));
+       }
+
+       // Animated Counter Script
+       const counters = document.querySelectorAll('.counter-up');
+       if(counters.length > 0) {
+           const counterObserver = new IntersectionObserver((entries, observer) => {
+               entries.forEach(entry => {
+                   if(entry.isIntersecting) {
+                       const targetElem = entry.target;
+                       const targetValue = parseFloat(targetElem.getAttribute('data-target'));
+                       const duration = 2000;
+                       const isDecimal = targetValue % 1 !== 0;
+                       
+                       let startTime = null;
+                       const step = (timestamp) => {
+                           if (!startTime) startTime = timestamp;
+                           const progress = Math.min((timestamp - startTime) / duration, 1);
+                           const currentValue = progress * targetValue;
+                           
+                           if(isDecimal) {
+                               targetElem.innerText = currentValue.toFixed(2);
+                           } else {
+                               targetElem.innerText = Math.floor(currentValue).toLocaleString('en-IN');
+                           }
+                           
+                           if (progress < 1) {
+                               window.requestAnimationFrame(step);
+                           } else {
+                               targetElem.innerText = isDecimal ? targetValue.toFixed(2) : targetValue.toLocaleString('en-IN');
+                               observer.unobserve(targetElem);
+                           }
+                       };
+                       window.requestAnimationFrame(step);
+                   }
+               });
+           }, { threshold: 0.5 });
+           
+           counters.forEach(counter => counterObserver.observe(counter));
+       }
+
+       // Form Submission Handler
+       const contactForm = document.getElementById('contactForm');
+       if(contactForm) {
+           contactForm.addEventListener('submit', function(e) {
+               e.preventDefault();
+               
+               const name = document.getElementById('formName').value;
+               const pickup = document.getElementById('formPickup').value;
+               const drop = document.getElementById('formDrop').value;
+               const phone = document.getElementById('formPhone').value;
+               
+               const message = `Hello EV GO MOVERS! I would like to get a quote.%0A%0A*Name:* ${name}%0A*Pickup:* ${pickup}%0A*Drop:* ${drop}%0A*Phone:* ${phone}%0A%0APlease get back to me with an estimate.`;
+               
+               const whatsappUrl = `https://wa.me/919218303695?text=${message}`;
+               window.open(whatsappUrl, '_blank');
+           });
        }
     </script>
   </body>

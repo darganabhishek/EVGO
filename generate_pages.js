@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const template = (title, content, isSubdir = false) => `
+const template = (title, content, isSubdir = false, heroCta = '') => `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -61,6 +61,7 @@ const template = (title, content, isSubdir = false) => `
     <header class="page-header">
       <div class="container">
         <h1 class="fade-in-up">${title}</h1>
+        ${heroCta}
       </div>
     </header>
 
@@ -102,9 +103,12 @@ const template = (title, content, isSubdir = false) => `
             <p><i class="ph-fill ph-map-pin"></i> Registered office - Pitampura</p>
         </div>
       </div>
-      <div class="footer-bottom text-center">
-        <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED. All rights reserved.</p>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-wrapper">
+        <p>&copy; 2026 EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED.</p>
+        <a href="http://www.mdinfo.in" target="_blank" class="mdi-link">DESIGNED AND DEVELOPED BY <span class="mdi-name">M.D. INFOTECH</span></a>
       </div>
+    </div>
     </footer>
     <script type="module" src="${isSubdir ? '../' : './'}main.js"></script>
     <script>
@@ -120,6 +124,62 @@ const template = (title, content, isSubdir = false) => `
                });
            });
            bars.forEach(bar => observer.observe(bar));
+       }
+
+       // Animated Counter Script
+       const counters = document.querySelectorAll('.counter-up');
+       if(counters.length > 0) {
+           const counterObserver = new IntersectionObserver((entries, observer) => {
+               entries.forEach(entry => {
+                   if(entry.isIntersecting) {
+                       const targetElem = entry.target;
+                       const targetValue = parseFloat(targetElem.getAttribute('data-target'));
+                       const duration = 2000;
+                       const isDecimal = targetValue % 1 !== 0;
+                       
+                       let startTime = null;
+                       const step = (timestamp) => {
+                           if (!startTime) startTime = timestamp;
+                           const progress = Math.min((timestamp - startTime) / duration, 1);
+                           const currentValue = progress * targetValue;
+                           
+                           if(isDecimal) {
+                               targetElem.innerText = currentValue.toFixed(2);
+                           } else {
+                               targetElem.innerText = Math.floor(currentValue).toLocaleString('en-IN');
+                           }
+                           
+                           if (progress < 1) {
+                               window.requestAnimationFrame(step);
+                           } else {
+                               targetElem.innerText = isDecimal ? targetValue.toFixed(2) : targetValue.toLocaleString('en-IN');
+                               observer.unobserve(targetElem);
+                           }
+                       };
+                       window.requestAnimationFrame(step);
+                   }
+               });
+           }, { threshold: 0.5 });
+           
+           counters.forEach(counter => counterObserver.observe(counter));
+       }
+
+       // Form Submission Handler
+       const contactForm = document.getElementById('contactForm');
+       if(contactForm) {
+           contactForm.addEventListener('submit', function(e) {
+               e.preventDefault();
+               
+               const name = document.getElementById('formName').value;
+               const pickup = document.getElementById('formPickup').value;
+               const drop = document.getElementById('formDrop').value;
+               const phone = document.getElementById('formPhone').value;
+               
+               const message = \`Hello EV GO MOVERS! I would like to get a quote.%0A%0A*Name:* \${name}%0A*Pickup:* \${pickup}%0A*Drop:* \${drop}%0A*Phone:* \${phone}%0A%0APlease get back to me with an estimate.\`;
+               
+               const whatsappUrl = \`https://wa.me/919218303695?text=\${message}\`;
+               window.open(whatsappUrl, '_blank');
+           });
        }
     </script>
   </body>
@@ -211,53 +271,62 @@ const pages = [
   {
     path: 'sustainability.html',
     title: 'Eco-Friendly Movers Driving Sustainable Logistics',
+    heroCta: `<div style="margin-top: 40px;"><a href="/contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);">Start Saving Today</a></div>`,
     content: `
-        <div class="grid-2">
-            <div class="reveal-left">
+        <div class="grid-2 align-start" style="align-items: flex-start;">
+            <div class="reveal-left" style="max-width: 95%;">
                 <h2 class="section-title">The EV <span class="text-green">Revolution</span></h2>
-                <p>EV GO MOVERS isn’t just changing how you move; we are redefining the efficiency of Indian logistics. By replacing fuel-heavy transport with a high-performance electric fleet, we deliver 100% cleaner results at a fraction of the cost.</p>
-                <div class="feature-list" style="margin-top:25px;">
-                    <div class="trust-item" style="background: rgba(0, 255, 136, 0.1); padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid var(--primary-green);">
-                         <i class="ph-fill ph-check-circle" style="color: var(--primary-green);"></i> <strong>ZERO</strong> Tailpipe Emissions
-                    </div>
-                    <div class="trust-item" style="background: rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid #4cc9f0;">
-                         <i class="ph-fill ph-currency-circle-dollar" style="color: #4cc9f0;"></i> <strong>75%</strong> Operational Savings
-                    </div>
-                </div>
+                <p style="color: var(--text-gray); margin-bottom: 25px; font-size: 1.1rem;">EV GO MOVERS isn’t just changing how you move; we are redefining the efficiency of Indian logistics. By replacing fuel-heavy transport with a high-performance electric fleet, we ensure:</p>
+                
+                <ul class="clean-list" style="margin-bottom: 40px; display: flex; flex-direction: column; gap: 15px;">
+                    <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;"><i class="ph-fill ph-leaf text-green" style="font-size: 1.4rem;"></i> Cleaner logistics & zero pollution</li>
+                    <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;"><i class="ph-fill ph-trend-down text-blue" style="font-size: 1.4rem;"></i> Lower operational cost for clients</li>
+                    <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;"><i class="ph-fill ph-wind text-green" style="font-size: 1.4rem;"></i> Zero tailpipe emissions</li>
+                    <li style="display: flex; align-items: center; gap: 12px; font-size: 1.05rem;"><i class="ph-fill ph-lightning text-blue" style="font-size: 1.4rem;"></i> High efficiency EV fleet operations</li>
+                </ul>
             </div>
+            
             <div class="reveal-right">
-                <div class="impact-comparison glass" style="padding: 40px; border: 1px solid rgba(0, 255, 136, 0.2); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #ff4d4d, var(--primary-green));"></div>
-                    <h3 class="text-center" style="margin-bottom: 30px; letter-spacing: 1px;">DRASTIC EFFICIENCY GAP</h3>
+                <div class="impact-comparison glass" style="padding: 30px; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; background: rgba(255, 255, 255, 0.02); box-shadow: 0 4px 24px rgba(0,0,0,0.2);">
+                    <h3 style="margin-bottom: 25px; font-size: 1.2rem; color: var(--white); border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px;">Efficiency Profile</h3>
                     
-                    <div class="drastic-graph" style="display: flex; align-items: flex-end; justify-content: space-around; height: 250px; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 20px; margin-bottom: 30px; position: relative;">
-                        <!-- Diesel Resource Demand -->
-                        <div class="graph-col" style="width: 35%; text-align: center;">
-                            <div style="height: 100%; background: linear-gradient(180deg, #ff4d4d, #b30000); border-radius: 10px 10px 0 0; position: relative; box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);">
-                                <span style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: 800; color: #ff4d4d;">400% Cost</span>
+                    <div class="comparison-cards" style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                        <!-- Diesel -->
+                        <div style="background: rgba(255, 77, 77, 0.03); border: 1px solid rgba(255, 77, 77, 0.15); border-left: 4px solid #ff4d4d; border-radius: 10px; padding: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+                                <span style="font-weight: 600; color: var(--text-gray); font-size: 0.95rem;">Diesel Logistics</span>
+                                <span class="badge" style="margin: 0; background: rgba(255, 77, 77, 0.1); color: #ff4d4d; border: 1px solid rgba(255, 77, 77, 0.2); font-size: 0.75rem; padding: 4px 10px;">High Cost</span>
                             </div>
-                            <p style="font-size: 0.8rem; margin-top: 15px; color: var(--text-gray);">Diesel Logistics</p>
+                            <div style="width: 100%; background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
+                                <div style="width: 100%; background: #ff4d4d; height: 100%;"></div>
+                            </div>
+                            <span style="font-size: 0.85rem; color: var(--text-gray);">Cost multiplier: <strong style="color: #ff4d4d;">4X Higher Cost</strong></span>
                         </div>
-                        
-                        <div style="color: var(--text-gray); font-weight: 900; font-size: 1.5rem; margin-bottom: 80px;">VS</div>
 
-                        <!-- EV Resource Demand -->
-                        <div class="graph-col" style="width: 35%; text-align: center;">
-                            <div style="height: 25%; background: linear-gradient(180deg, var(--primary-green), #00a35c); border-radius: 10px 10px 0 0; position: relative; box-shadow: 0 0 25px rgba(0, 255, 136, 0.4); border: 2px solid #fff;">
-                                <span style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: 800; color: var(--primary-green);">100% Efficiency</span>
+                        <!-- EV -->
+                        <div style="background: rgba(0, 255, 136, 0.05); border: 1px solid rgba(0, 255, 136, 0.2); border-left: 4px solid var(--primary-green); border-radius: 10px; padding: 20px; position: relative;">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0,255,136,0.02) 0%, transparent 100%); pointer-events: none; border-radius: 10px;"></div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; position: relative; z-index: 1;">
+                                <span style="font-weight: 600; color: var(--white); font-size: 0.95rem;">EV GO MOVERS</span>
+                                <span class="badge" style="margin: 0; background: rgba(0, 255, 136, 0.15); color: var(--primary-green); border: 1px solid rgba(0, 255, 136, 0.3); font-size: 0.75rem; padding: 4px 10px;"><i class="ph-bold ph-trend-down" style="margin-right: 4px;"></i>75% Lower Cost</span>
                             </div>
-                            <p style="font-size: 0.8rem; margin-top: 15px; color: var(--primary-green); font-weight: 600;">EV GO MOVERS</p>
+                            <div style="width: 100%; background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 12px; position: relative; z-index: 1;">
+                                <div style="width: 100%; background: linear-gradient(90deg, #00CC6A, #00FF88); height: 100%; box-shadow: 0 0 10px rgba(0,255,136,0.5);"></div>
+                            </div>
+                            <span style="font-size: 0.85rem; color: var(--text-gray); position: relative; z-index: 1;">Cost multiplier: <strong style="color: var(--primary-green);">Optimized Efficiency</strong></span>
                         </div>
                     </div>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                        <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; text-align: center; border: 1px solid var(--glass-border);">
-                            <p style="font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase;">Daily CO2 Savings</p>
-                            <h4 style="color: var(--primary-green); font-size: 1.5rem;">2,000 KG</h4>
+                        <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.02); padding: 15px; border-radius: 10px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05);">
+                            <p style="font-size: 0.75rem; color: var(--text-gray); text-transform: uppercase; margin-bottom: 5px;">Daily CO2 Saved</p>
+                            <h4 style="color: var(--primary-green); font-size: 1.3rem; line-height: 1;">2,000 KG</h4>
+                            <p style="font-size: 0.7rem; color: var(--text-gray); margin-top: 5px;">(per 10 vehicles)</p>
                         </div>
-                        <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; text-align: center; border: 1px solid var(--glass-border);">
-                            <p style="font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase;">Daily Cash Savings</p>
-                            <h4 style="color: #4cc9f0; font-size: 1.5rem;">₹60,000</h4>
+                        <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.02); padding: 15px; border-radius: 10px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05);">
+                            <p style="font-size: 0.75rem; color: var(--text-gray); text-transform: uppercase; margin-bottom: 5px;">Daily Cash Savings</p>
+                            <h4 style="color: #4cc9f0; font-size: 1.3rem; line-height: 1;">₹60,000</h4>
+                            <p style="font-size: 0.7rem; color: var(--text-gray); margin-top: 5px;">(estimated)</p>
                         </div>
                     </div>
                 </div>
@@ -265,20 +334,66 @@ const pages = [
         </div>
 
         <!-- Annual Impact Banner -->
-        <div class="glass" style="margin-top: 50px; padding: 40px; text-align: center; border: 2px solid var(--primary-green);">
-            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">The Power of One Fleet</h2>
-            <p style="color: var(--text-gray); max-width: 800px; margin: 0 auto 30px;">In just one year, our standard 100-vehicle fleet prevents 730 Tons of CO2 emissions and saves ₹2.19 Crore in operational fuel waste.</p>
-            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+        <div class="glass" style="margin-top: 60px; padding: 60px 40px; text-align: center; border: 1px solid rgba(0, 255, 136, 0.15); background: linear-gradient(180deg, rgba(0,255,136,0.05) 0%, rgba(255,255,255,0.01) 100%);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 15px;">The Power of One Fleet</h2>
+            <p style="color: var(--text-gray); max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem; line-height: 1.6;">In just one year, our standard 100-vehicle fleet prevents <span style="color: var(--white); font-weight: 500;">730 Tons of CO2 emissions</span> and saves <span style="color: var(--white); font-weight: 500;">₹2.19 Crore</span> in operational fuel waste.</p>
+            <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
                  <div style="text-align: center;">
-                    <i class="ph-fill ph-tree" style="font-size: 3rem; color: var(--primary-green);"></i>
-                    <h3 style="margin-top: 10px;">35,000+</h3>
-                    <p style="font-size: 0.8rem; color: var(--text-gray);">Trees Planted Equivalent</p>
+                    <i class="ph-fill ph-tree" style="font-size: 4rem; color: var(--primary-green); margin-bottom: 10px; display: inline-block;"></i>
+                    <h3 style="font-size: 2.2rem; margin-bottom: 5px;"><span class="counter-up" data-target="35000">0</span>+</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); font-weight: 500;">Equivalent to planting trees</p>
                  </div>
                  <div style="text-align: center;">
-                    <i class="ph-fill ph-coins" style="font-size: 3rem; color: #ffd700;"></i>
-                    <h3 style="margin-top: 10px;">₹2,19,00,000</h3>
-                    <p style="font-size: 0.8rem; color: var(--text-gray);">Operational Wealth Gained</p>
+                    <i class="ph-fill ph-coins" style="font-size: 4rem; color: #ffd700; margin-bottom: 10px; display: inline-block;"></i>
+                    <h3 style="font-size: 2.2rem; margin-bottom: 5px;">₹<span class="counter-up" data-target="2.19">0</span> Cr</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); font-weight: 500;">Operational Wealth Gained</p>
                  </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us Grid -->
+        <div style="margin-top: 80px; margin-bottom: 40px;">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Why EV Logistics Works</h2>
+                <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto;">Scale your supply chain faster, cheaper, and cleaner seamlessly.</p>
+            </div>
+            
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
+                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(0,255,136,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="ph-fill ph-wallet" style="font-size: 1.5rem; color: var(--primary-green);"></i>
+                    </div>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Lower Costs</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Eliminate fuel surcharges completely. Predictable routing with flat EV rates saves huge costs on scale.</p>
+                </div>
+                
+                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(76,201,240,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="ph-fill ph-rocket-launch" style="font-size: 1.5rem; color: #4cc9f0;"></i>
+                    </div>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Faster Delivery</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Modern fleet telematics guarantee route optimization resulting in higher on-time deliveries natively.</p>
+                </div>
+                
+                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(0,255,136,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="ph-fill ph-certificate" style="font-size: 1.5rem; color: var(--primary-green);"></i>
+                    </div>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Eco-Friendly Compliance</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Accelerate your company’s Net Zero targets perfectly aligning with immediate government standards.</p>
+                </div>
+                
+                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(76,201,240,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <i class="ph-fill ph-chart-line-up" style="font-size: 1.5rem; color: #4cc9f0;"></i>
+                    </div>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Scalable Fleet</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">From a few boxes to complex warehouse migrations, our dynamically sized EV fleet scales with you.</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="/contact.html" class="btn btn-outline" style="padding: 12px 30px;">Speak to a Logistics Expert</a>
             </div>
         </div>
       `
@@ -312,13 +427,13 @@ const pages = [
                  </div>
             </div>
             <div class="glass" style="padding: 30px;">
-                <form class="cta-form" style="display: flex; flex-direction: column; gap: 15px;">
-                    <input type="text" placeholder="Your Name" />
-                    <input type="text" placeholder="Pickup Location" />
-                    <input type="text" placeholder="Drop Location" />
-                    <input type="tel" placeholder="Phone Number" />
-                    <button type="button" class="btn btn-primary glow">Get Estimate</button>
-                    <a href="#" class="btn btn-whatsapp text-center" style="background:#25D366; border:none; color:white; justify-content:center;">WhatsApp Us</a>
+                <form class="cta-form" id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" id="formName" placeholder="Your Name" required />
+                    <input type="text" id="formPickup" placeholder="Pickup Location" required />
+                    <input type="text" id="formDrop" placeholder="Drop Location" required />
+                    <input type="tel" id="formPhone" placeholder="Phone Number" required />
+                    <button type="submit" class="btn btn-primary glow" style="width: 100%; justify-content: center;">Get Estimate</button>
+                    <a href="https://wa.me/919218303695" target="_blank" class="btn btn-whatsapp text-center" style="background:#25D366; border:none; color:white; justify-content:center;">WhatsApp Us</a>
                 </form>
             </div>
         </div>
@@ -352,7 +467,7 @@ const pages = [
 
 pages.forEach(page => {
   const filePath = path.join(__dirname, page.path);
-  const fileContent = template(page.title, page.content, page.isSubdir);
+  const fileContent = template(page.title, page.content, page.isSubdir, page.heroCta || '');
   fs.writeFileSync(filePath, fileContent);
   console.log('Created:', filePath);
 });

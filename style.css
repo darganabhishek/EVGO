@@ -126,11 +126,11 @@ svg {
 .btn-primary:hover {
   background: #00cc6a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
 }
 
 .btn-primary.glow {
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.15);
 }
 
 .btn-outline {
@@ -160,7 +160,7 @@ svg {
   will-change: backdrop-filter;
   transform: translateZ(0);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
   border-radius: 16px;
 }
 
@@ -1968,5 +1968,23 @@ textarea::placeholder {
   
   .testimonial-card, .impact-card, .goal-card {
     min-width: unset;
+  }
+}
+
+/* Custom Overrides for SaaS Aesthetics & Responsiveness */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .align-start {
+    align-items: center;
+  }
+  .comparison-cards .badge {
+    position: static;
+    margin-bottom: 5px;
+  }
+  .impact-comparison {
+    padding: 20px !important;
   }
 }
