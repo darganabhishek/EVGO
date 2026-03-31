@@ -39,7 +39,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <nav class="navbar" id="navbar">
       <div class="container nav-container">
         <a href="/" class="logo">
-          <img src="/images/ev-go-logo.jpg" alt="EV GO MOVERS" style="height: 45px;">
+          <img src="/images/ev-go-logo.png" alt="EV GO MOVERS" style="height: 45px;">
         </a>
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
@@ -73,7 +73,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <footer>
       <div class="container footer-content">
         <div class="footer-col">
-          <img src="/images/ev-go-logo.jpg" alt="EV GO MOVERS" style="height: 45px; margin-bottom: 20px;">
+          <img src="/images/ev-go-logo.png" alt="EV GO MOVERS" style="height: 45px; margin-bottom: 20px;">
           <h3>EV GO MOVERS</h3>
           <p>India's Leading Electric Packers & Movers Company.</p>
           <div class="social-links">
