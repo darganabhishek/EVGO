@@ -166,7 +166,43 @@ function animateCursor() {
     requestAnimationFrame(animateCursor);
 }
 
-// Only enable on non-touch devices
+// Initialize B2B Slider
+const b2bSlider = new Swiper('.b2b-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: false,
+    loop: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
+});
+
+// Only enable animateCursor on non-touch devices
 if (window.matchMedia("(pointer: fine)").matches) {
     animateCursor();
 }

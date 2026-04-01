@@ -19,6 +19,7 @@
   <!-- Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style.css?v=1.0.9" />
   <style>
     .logo img {
@@ -191,67 +192,83 @@
         <p>EV Go Movers specializes in diversified B2B logistics solutions including:</p>
       </div>
 
-      <div class="services-grid">
-        <!-- 01 Transportation -->
-        <div class="service-card glass reveal-up" style="transition-delay: 0.1s">
-          <div class="service-number">01</div>
-          <div class="service-icon"><i class="ph-fill ph-truck"></i></div>
-          <h3>Transportation & Fleet</h3>
-          <p>Reliable commercial vehicle solutions tailored for high-volume B2B operations.</p>
-          <ul>
-            <li>Dedicated vehicle deployment</li>
-            <li>Contract logistics support</li>
-            <li>First, mid, and last-mile</li>
-          </ul>
+      <div class="swiper b2b-slider reveal-up">
+        <div class="swiper-wrapper">
+          <!-- 01 Transportation -->
+          <div class="swiper-slide">
+            <div class="service-card glass">
+              <div class="service-number">01</div>
+              <div class="service-icon"><i class="ph-fill ph-truck"></i></div>
+              <h3>Transportation & Fleet</h3>
+              <p>Reliable commercial vehicle solutions tailored for high-volume B2B operations.</p>
+              <ul>
+                <li>Dedicated vehicle deployment</li>
+                <li>Contract logistics support</li>
+                <li>First, mid, and last-mile</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 02 Supply Chain -->
+          <div class="swiper-slide">
+            <div class="service-card glass">
+              <div class="service-number">02</div>
+              <div class="service-icon"><i class="ph-fill ph-package"></i></div>
+              <h3>Supply Chain Solutions</h3>
+              <p>Optimized distribution networks for industrial and FMCG delivery cycles.</p>
+              <ul>
+                <li>Warehouse supply distribution</li>
+                <li>Industrial goods movement</li>
+                <li>FMCG and dairy logistics</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 03 Enterprise -->
+          <div class="swiper-slide">
+            <div class="service-card glass">
+              <div class="service-number">03</div>
+              <div class="service-icon"><i class="ph-fill ph-buildings"></i></div>
+              <h3>Enterprise Support</h3>
+              <p>Scalable logistics management for manufacturing and distribution centers.</p>
+              <ul>
+                <li>Manufacturing unit support</li>
+                <li>Warehouse-to-DC transport</li>
+                <li>Custom business solutions</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 04 Fleet Strength -->
+          <div class="swiper-slide">
+            <div class="service-card glass">
+              <div class="service-number">04</div>
+              <div class="service-icon"><i class="ph-fill ph-shield-checkered"></i></div>
+              <h3>Fleet Strength</h3>
+              <p>Our robust 100% electric infrastructure ensures uptime and reliability.</p>
+              <ul>
+                <li>70+ operational EV fleet</li>
+                <li>Continuous fleet expansion</li>
+                <li>Live route monitoring</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 05 Industries -->
+          <div class="swiper-slide">
+            <div class="service-card glass">
+              <div class="service-number">05</div>
+              <div class="service-icon"><i class="ph-fill ph-user-focus"></i></div>
+              <h3>Industries Served</h3>
+              <p>We partner with industry leaders across various sectors to drive efficiency.</p>
+              <ul>
+                <li>Logistics & Courier sector</li>
+                <li>Manufacturing & Cement</li>
+                <li>Dairy & FMCG chains</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- 02 Supply Chain -->
-        <div class="service-card glass reveal-up" style="transition-delay: 0.2s">
-          <div class="service-number">02</div>
-          <div class="service-icon"><i class="ph-fill ph-package"></i></div>
-          <h3>Supply Chain Solutions</h3>
-          <p>Optimized distribution networks for industrial and FMCG delivery cycles.</p>
-          <ul>
-            <li>Warehouse supply distribution</li>
-            <li>Industrial goods movement</li>
-            <li>FMCG and dairy logistics</li>
-          </ul>
-        </div>
-        <!-- 03 Enterprise -->
-        <div class="service-card glass reveal-up" style="transition-delay: 0.3s">
-          <div class="service-number">03</div>
-          <div class="service-icon"><i class="ph-fill ph-buildings"></i></div>
-          <h3>Enterprise Support</h3>
-          <p>Scalable logistics management for manufacturing and distribution centers.</p>
-          <ul>
-            <li>Manufacturing unit support</li>
-            <li>Warehouse-to-DC transport</li>
-            <li>Custom business solutions</li>
-          </ul>
-        </div>
-        <!-- 04 Fleet Strength -->
-        <div class="service-card glass reveal-up" style="transition-delay: 0.4s">
-          <div class="service-number">04</div>
-          <div class="service-icon"><i class="ph-fill ph-shield-checkered"></i></div>
-          <h3>Fleet Strength</h3>
-          <p>Our robust 100% electric infrastructure ensures uptime and reliability.</p>
-          <ul>
-            <li>70+ operational EV fleet</li>
-            <li>Continuous fleet expansion</li>
-            <li>Live route monitoring</li>
-          </ul>
-        </div>
-        <!-- 05 Industries -->
-        <div class="service-card glass reveal-up" style="transition-delay: 0.5s">
-          <div class="service-number">05</div>
-          <div class="service-icon"><i class="ph-fill ph-user-focus"></i></div>
-          <h3>Industries Served</h3>
-          <p>We partner with industry leaders across various sectors to drive efficiency.</p>
-          <ul>
-            <li>Logistics & Courier sector</li>
-            <li>Manufacturing & Cement</li>
-            <li>Dairy & FMCG chains</li>
-          </ul>
-        </div>
+        <!-- Swiper Pagination & Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
@@ -354,6 +371,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="./main.js"></script>
 </body>
 
