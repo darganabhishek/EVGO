@@ -19,7 +19,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <!-- Swiper Slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
-    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.1.0" />
+    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.1.2" />
     <style>
       .page-header {
         padding-top: 140px;
