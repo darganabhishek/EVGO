@@ -1383,41 +1383,7 @@ footer {
 }
 
 /* Team Cards */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.team-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  background: var(--secondary-blue);
-  border: 1px solid var(--glass-border);
-}
-
-.team-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: top;
-  transition: transform 0.5s;
-}
-
-.team-card:hover .team-img {
-  transform: scale(1.05);
-}
-
-.team-info {
-  padding: 20px;
-  text-align: center;
-  background: linear-gradient(to top, rgba(10, 25, 47, 1), transparent);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+/* Team grid handled in main about page section */
 
 /* Testimonial Carousel */
 /* Testimonial Carousel - Rounded Card Slider */
@@ -1812,13 +1778,7 @@ textarea::placeholder {
   margin-bottom: 80px;
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  margin-top: 50px;
-  justify-content: center;
-}
+/* Centralized in About Section styles */
 
 .team-card {
   position: relative;
@@ -2348,9 +2308,9 @@ textarea::placeholder {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto 100px;
 }
 

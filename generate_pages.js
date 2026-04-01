@@ -19,7 +19,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <!-- Swiper Slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
-    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.1.2" />
+    <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.1.3" />
     <style>
       .page-header {
         padding-top: 140px;
@@ -302,6 +302,21 @@ const pages = [
             <div class="team-info">
                <div class="team-name">Ankit Garg</div>
                <div class="team-title">Director & Operations Strategist</div>
+            </div>
+         </div>
+         <div class="team-card glass">
+            <img src="/images/team-virendra.jpeg" alt="Virendra Kumar" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="team-info">
+               <div class="team-name">Virendra Kumar</div>
+               <div class="team-title">Chief Business Officer</div>
+            </div>
+            <div class="team-hover-overlay">
+               <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-light); text-align: left;">
+                   Virendra Kumar, Chief Business Officer at EV Go Movers, brings 11.5+ years of experience in data analytics, operational intelligence, and business strategy within the mobility sector.<br><br>
+                   He specializes in building scalable, data-driven systems—focusing on KPI governance, cost optimization, and profitability across multi-city operations.<br><br>
+                   At EV Go Movers, he drives growth by aligning operations with strategy, enabling smarter decisions and stronger unit economics.<br><br>
+                   Focused on clarity, efficiency, and scale.
+               </p>
             </div>
          </div>
       </div>
