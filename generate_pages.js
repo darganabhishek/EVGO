@@ -607,6 +607,142 @@ const pages = [
     title: 'Local & Intercity Moving',
     content: '<p>Reliable and affordable transportation for short and long distances with electric vehicles.</p>',
     isSubdir: true
+  },
+  {
+    path: 'privacy-policy.html',
+    title: 'Privacy Policy',
+    content: `
+      <div class="glass" style="padding: 50px; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light);">
+          <p style="margin-bottom: 30px;">At EVGO Movers we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and safeguard your data when you visit our website <a href="https://evgomovers.com/" style="color: var(--primary-green);">https://evgomovers.com/</a> or use our services.</p>
+          
+          <p style="margin-bottom: 30px;">By accessing or using our website or services, you agree to the terms outlined in this Privacy Policy.</p>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">1. Company Information</h2>
+              <p><strong>Business Name:</strong> EVGO Movers</p>
+              <p><strong>Business Type:</strong> Logistics & Relocation Services Provider</p>
+              <p><strong>Website:</strong> <a href="https://evgomovers.com/" style="color: var(--primary-green);">https://evgomovers.com/</a></p>
+              <p><strong>Email:</strong> <a href="mailto:evgo@evgomovers.com" style="color: var(--primary-green);">evgo@evgomovers.com</a></p>
+              <p><strong>Registered Address:</strong> 607 Aggarwal Chamber Plaza 1, Netaji Subhash Place Road, New Delhi, North West Delhi - 110034 Delhi India</p>
+              <p><strong>Corporate Address:</strong> Building No./Flat No: Plot no 34, Sector 44 Road, SM Sehgal Foundation, Gurugram, Haryana - 122003</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">2. Services We Offer</h2>
+              <p>EVGO Movers provides logistics and relocation services including but not limited to:</p>
+              <ul style="list-style: disc; margin-left: 20px; margin-top: 10px;">
+                  <li>Household shifting</li>
+                  <li>Office relocation</li>
+                  <li>Vehicle transportation</li>
+                  <li>Packing and unpacking services</li>
+                  <li>Storage and warehousing solutions</li>
+              </ul>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">3. Information We Collect</h2>
+              <p>We collect information to provide better services and improve user experience.</p>
+              <h3 style="margin-top: 20px; color: var(--white);">a. Personal Information</h3>
+              <ul style="list-style: disc; margin-left: 20px; margin-top: 10px;">
+                  <li>Full name</li>
+                  <li>Phone number</li>
+                  <li>Email address</li>
+                  <li>Pickup and delivery addresses</li>
+                  <li>Any additional details shared for service fulfillment</li>
+              </ul>
+              <h3 style="margin-top: 20px; color: var(--white);">b. Service-Related Information</h3>
+              <ul style="list-style: disc; margin-left: 20px; margin-top: 10px;">
+                  <li>Type of goods/items to be moved</li>
+                  <li>Service preferences</li>
+                  <li>Booking details and transaction records</li>
+              </ul>
+              <h3 style="margin-top: 20px; color: var(--white);">c. Technical & Usage Data</h3>
+              <ul style="list-style: disc; margin-left: 20px; margin-top: 10px;">
+                  <li>IP address</li>
+                  <li>Browser type and version</li>
+                  <li>Device information</li>
+                  <li>Pages visited and interaction data</li>
+              </ul>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">4. How We Use Your Information</h2>
+              <p>We use your data for the following purposes:</p>
+              <ul style="list-style: disc; margin-left: 20px;">
+                  <li>To process bookings and deliver services</li>
+                  <li>To communicate service updates, confirmations, and support</li>
+                  <li>To improve website functionality and customer experience</li>
+                  <li>To generate invoices and maintain transaction records</li>
+                  <li>To comply with legal obligations</li>
+                  <li>To prevent fraud and ensure security</li>
+              </ul>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">5. Data Sharing and Disclosure</h2>
+              <p>We do not sell your personal information. However, we may share your data with:</p>
+              <ul style="list-style: disc; margin-left: 20px;">
+                  <li>Trusted service partners (drivers, vendors) for execution</li>
+                  <li>Payment service providers for secure transactions</li>
+                  <li>Government or legal authorities if required by law</li>
+                  <li>Technology providers for operational purposes</li>
+              </ul>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">6. Cookies</h2>
+              <p>Our website uses cookies to enhance user experience and analyze traffic. You can control or disable cookies through your browser settings.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">7. Data Security</h2>
+              <p>We implement appropriate technical measures to protect your data, including secure servers and restricted access. While we strive for absolute protection, no system is 100% secure.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">8. Data Retention</h2>
+              <p>We retain your personal data only for as long as necessary to fulfill service obligations, maintain legal records, and resolve disputes.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">9. Your Rights</h2>
+              <p>You have the right to access, correct, or request deletion of your data. Contact us via email to exercise these rights.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">10. Third-Party Links</h2>
+              <p>We are not responsible for the privacy practices of third-party websites linked on our site.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">11. Children's Privacy</h2>
+              <p>Our services are intended for individuals 18+ and we do not knowingly collect data from minors.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">12. Changes to This Policy</h2>
+              <p>Updates to this policy will be posted on this page. Continued use of our services implies acceptance.</p>
+          </div>
+
+          <div style="margin-bottom: 40px; border: 1px solid var(--primary-green); padding: 20px; border-radius: 12px; background: rgba(0, 255, 136, 0.05);">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">13. Grievance Redressal</h2>
+              <p>For any concerns regarding privacy or data usage, you may contact:</p>
+              <p><strong>Grievance Office:</strong> Support Team</p>
+              <p><strong>Email:</strong> <a href="mailto:evgo@evgomovers.com" style="color: var(--primary-green);">evgo@evgomovers.com</a></p>
+              <p><strong>Address:</strong> Plot no 34, Sector 44 Road, Gurugram, Haryana - 122003</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">14. Governing Law</h2>
+              <p>This Privacy Policy shall be governed by the laws of India. Any disputes shall be subject to the jurisdiction of the courts in New Delhi.</p>
+          </div>
+
+          <div id="consent" style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">15. Consent</h2>
+              <p>By using our website or services, you acknowledge that you have read, understood, and agreed to this Privacy Policy.</p>
+          </div>
+      </div>
+    `
   }
 ];
 
