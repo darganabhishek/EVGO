@@ -218,6 +218,10 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
         });
     </script>
   </body>
+</html>
+`;
+
+const pages = [
   {
     path: 'about.html',
     title: 'About EV GO MOVERS – Smart Electric Logistics Company',
