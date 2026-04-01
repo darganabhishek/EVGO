@@ -753,6 +753,62 @@ const pages = [
           </div>
       </div>
     `
+  },
+  {
+    path: 'terms.html',
+    title: 'Terms & Conditions',
+    content: `
+      <div class="glass" style="padding: 50px; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--text-light);">
+          <p style="margin-bottom: 30px;">Welcome to EVGO Movers! These Terms and Conditions govern your use of our website and services. By accessing or using our platform, you agree to be bound by these terms.</p>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">1. Acceptance of Terms</h2>
+              <p>By using the services provided by EV GO MOVERS LOGISTICS INDIA PRIVATE LIMITED, you acknowledge that you have read, understood, and agreed to these Terms and Conditions. If you do not agree, please refrain from using our services.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">2. Services Provided</h2>
+              <p>We provide electric vehicle-based logistics and relocation services. All service bookings are subject to availability and confirmation by our team. We reserve the right to refuse service to anyone for any reason at any time.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">3. User Responsibilities</h2>
+              <p>Users are responsible for providing accurate information regarding pickup/drop locations, the nature of goods, and contact details. Any delays or issues arising from inaccurate information will be the responsibility of the user.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">4. Pricing and Payments</h2>
+              <p>Service quotes are estimates based on the information provided. Final pricing may vary based on actual distance, load volume, and any additional services requested. Payments must be made in accordance with the agreed-upon schedule.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">5. Limitation of Liability</h2>
+              <p>While we take utmost care of your goods, EVGO Movers shall not be liable for any indirect, incidental, or consequential damages. Our liability for any loss or damage during transit is limited to the terms specified in the individual service agreement.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">6. Cancellation and Refunds</h2>
+              <p>Cancellations must be made at least 24 hours before the scheduled service time. Refund eligibility will be determined based on the timing of the cancellation and any costs already incurred by the company.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">7. Intellectual Property</h2>
+              <p>All content on this website, including text, logos, and images, is the property of EVGO Movers and is protected by intellectual property laws. Unauthorized use is strictly prohibited.</p>
+          </div>
+
+          <div style="margin-bottom: 40px;">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">8. Governing Law</h2>
+              <p>These terms are governed by the laws of India. Any disputes arising from these terms or our services shall be subject to the exclusive jurisdiction of the courts in New Delhi.</p>
+          </div>
+
+          <div style="margin-bottom: 40px; border: 1px solid var(--primary-green); padding: 20px; border-radius: 12px; background: rgba(0, 255, 136, 0.05);">
+              <h2 style="color: var(--primary-green); margin-bottom: 20px;">9. Contact Information</h2>
+              <p>For any questions regarding these Terms and Conditions, please contact us at:</p>
+              <p><strong>Email:</strong> <a href="mailto:evgo@evgomovers.com" style="color: var(--primary-green);">evgo@evgomovers.com</a></p>
+              <p><strong>Phone:</strong> +91 9218303695</p>
+          </div>
+      </div>
+    `
   }
 ];
 
