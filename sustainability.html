@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="./style.css?v=1.0.9" />
     <style>
       .page-header {
@@ -151,39 +155,47 @@
                 <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto;">Scale your supply chain faster, cheaper, and cleaner seamlessly.</p>
             </div>
             
-            <div class="services-grid">
-                <!-- 01 Lower Costs -->
-                <div class="service-card glass reveal-up" style="transition-delay: 0.1s">
-                    <div class="service-number">01</div>
-                    <div class="service-icon"><i class="ph-fill ph-wallet"></i></div>
-                    <h3>Lower Costs</h3>
-                    <p>Eliminate fuel surcharges completely. Predictable routing with flat EV rates saves huge costs on scale.</p>
+            <div class="swiper sustainability-slider reveal-up">
+                <div class="swiper-wrapper">
+                    <!-- 01 Lower Costs -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-wallet"></i></div>
+                            <h4>Lower Costs</h4>
+                            <p>Eliminate fuel surcharges completely. Predictable routing with flat EV rates saves huge costs on scale.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 02 Faster Delivery -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-rocket-launch"></i></div>
+                            <h4>Faster Delivery</h4>
+                            <p>Modern fleet telematics guarantee route optimization resulting in higher on-time deliveries natively.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 03 Eco-Friendly -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-certificate"></i></div>
+                            <h4>Eco-Friendly Compliance</h4>
+                            <p>Accelerate your company's Net Zero targets perfectly aligning with immediate government standards.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 04 Scalable Fleet -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-chart-line-up"></i></div>
+                            <h4>Scalable Fleet</h4>
+                            <p>From a few boxes to complex warehouse migrations, our dynamically sized EV fleet scales with you.</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- 02 Faster Delivery -->
-                <div class="service-card glass reveal-up" style="transition-delay: 0.2s">
-                    <div class="service-number">02</div>
-                    <div class="service-icon"><i class="ph-fill ph-rocket-launch"></i></div>
-                    <h3>Faster Delivery</h3>
-                    <p>Modern fleet telematics guarantee route optimization resulting in higher on-time deliveries natively.</p>
-                </div>
-                
-                <!-- 03 Eco-Friendly -->
-                <div class="service-card glass reveal-up" style="transition-delay: 0.3s">
-                    <div class="service-number">03</div>
-                    <div class="service-icon"><i class="ph-fill ph-leaf"></i></div>
-                    <h3>Eco-Friendly</h3>
-                    <p>Accelerate your company's Net Zero targets perfectly aligning with immediate government standards.</p>
-                </div>
-                
-                <!-- 04 Scalable Fleet -->
-                <div class="service-card glass reveal-up" style="transition-delay: 0.4s">
-                    <div class="service-number">04</div>
-                    <div class="service-icon"><i class="ph-fill ph-chart-line-up"></i></div>
-                    <h3>Scalable Fleet</h3>
-                    <p>From a few boxes to complex warehouse migrations, our dynamically sized EV fleet scales with you.</p>
-                </div>
+                <!-- Pagination/Nav could be added here if needed, but keeping it simple for now -->
             </div>
+        </div>
             
         </div>
       
@@ -210,11 +222,6 @@
         <a href="/services.html">Logistics Management</a>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms & Conditions</a>
-      </div>
-      <div class="footer-col">
         <h4>Contact</h4>
         <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
         <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
@@ -228,6 +235,7 @@
       </div>
     </div>
   </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./main.js"></script>
     <script>
        // Simple script to animate charts if present

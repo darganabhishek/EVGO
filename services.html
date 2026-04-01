@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="./style.css?v=1.0.9" />
     <style>
       .page-header {
@@ -67,84 +71,52 @@
       <div class="container">
         
         <div class="services-grid">
-          <!-- 01 Transportation & Fleet -->
-          <div class="service-card glass reveal-up" style="transition-delay: 0.1s">
-            <div class="service-number">01</div>
+          <!-- Card 1: Fleet Services -->
+          <div class="service-card glass">
             <div class="service-card-header">
-              <img src="/images/image.png" alt="Electric Fleet">
+              <img src="/images/image.png" alt="Electric Fleet" class="service-card-image">
             </div>
-            <div class="service-icon"><i class="ph-fill ph-truck"></i></div>
-            <h3>Transportation & Fleet</h3>
-            <p>Reliable commercial vehicle solutions tailored for high-volume B2B operations and fleet efficiency.</p>
-            <ul>
-              <li>Dedicated vehicle deployment</li>
-              <li>Contract logistics support</li>
-              <li>First, mid, and last-mile delivery</li>
-            </ul>
+            <div class="service-card-body">
+              <h3>Electric Fleet Services</h3>
+              <ul class="service-feature-list">
+                <li>Lease 2W, 3W, and 4W electric vehicles for diverse industries.</li>
+                <li>Customize contracts to suit your operational needs.</li>
+                <li>Enjoy complete vehicle maintenance and support services.</li>
+                <li>Reduce costs and emissions with India's smartest EV fleet.</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 02 Supply Chain Solutions -->
-          <div class="service-card glass reveal-up" style="transition-delay: 0.2s">
-            <div class="service-number">02</div>
+          <!-- Card 2: Last Mile -->
+          <div class="service-card glass">
             <div class="service-card-header">
-              <img src="/images/logistics.png" alt="Supply Chain">
+              <img src="/images/last-mile.png" alt="Last Mile Delivery" class="service-card-image">
             </div>
-            <div class="service-icon"><i class="ph-fill ph-package"></i></div>
-            <h3>Supply Chain Solutions</h3>
-            <p>Optimized distribution networks designed for seamless industrial and FMCG delivery cycles.</p>
-            <ul>
-              <li>Warehouse supply distribution</li>
-              <li>Industrial goods movement</li>
-              <li>FMCG and dairy supply logistics</li>
-            </ul>
+            <div class="service-card-body">
+              <h3>Electrifying Last- Mile Delivery</h3>
+              <ul class="service-feature-list">
+                <li>Ensure fast and eco-friendly deliveries across urban zones.</li>
+                <li>Track orders in real-time with 24/7 support access.</li>
+                <li>Achieve reliable, zero-emission delivery drop-offs.</li>
+                <li>Contribute to cleaner cities through electric mobility.</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- 03 Enterprise Support -->
-          <div class="service-card glass reveal-up" style="transition-delay: 0.3s">
-            <div class="service-number">03</div>
+          <!-- Card 3: Logistics Management -->
+          <div class="service-card glass">
             <div class="service-card-header">
-              <img src="/images/last-mile.png" alt="Enterprise Support">
+              <img src="/images/logistics.png" alt="Logistics Management" class="service-card-image">
             </div>
-            <div class="service-icon"><i class="ph-fill ph-buildings"></i></div>
-            <h3>Enterprise Support</h3>
-            <p>Scalable logistics management solutions for manufacturing hubs and major distribution centers.</p>
-            <ul>
-              <li>Manufacturing unit logistics</li>
-              <li>Warehouse-to-DC transport</li>
-              <li>Custom corporate business solutions</li>
-            </ul>
-          </div>
-
-          <!-- 04 Fleet Strength -->
-          <div class="service-card glass reveal-up" style="transition-delay: 0.4s">
-            <div class="service-number">04</div>
-            <div class="service-card-header">
-              <img src="/images/journey-visual.png" alt="Fleet Strength">
+            <div class="service-card-body">
+              <h3>Logistics Management</h3>
+              <ul class="service-feature-list">
+                <li>Use AI-powered dashboards for smart logistics control.</li>
+                <li>Optimize routes with predictive analytics and insights.</li>
+                <li>Manage performance with real-time data intelligence.</li>
+                <li>Scale operations via our urban mobility tech platform.</li>
+              </ul>
             </div>
-            <div class="service-icon"><i class="ph-fill ph-shield-checkered"></i></div>
-            <h3>Fleet Strength</h3>
-            <p>Our robust 100% electric infrastructure ensures maximum uptime, reliability, and sustainability.</p>
-            <ul>
-              <li>70+ operational EV fleet</li>
-              <li>Continuous expansion projects</li>
-              <li>Structured monitoring systems</li>
-            </ul>
-          </div>
-
-          <!-- 05 Industries Served -->
-          <div class="service-card glass reveal-up" style="transition-delay: 0.5s">
-            <div class="service-number">05</div>
-            <div class="service-card-header">
-              <img src="/images/why-choose-us.png" alt="Industries Served">
-            </div>
-            <div class="service-icon"><i class="ph-fill ph-user-focus"></i></div>
-            <h3>Industries Served</h3>
-            <p>We partner with industry leaders across various sectors to drive operational excellence.</p>
-            <ul>
-              <li>Logistics & Courier sector</li>
-              <li>Manufacturing & Cement</li>
-              <li>Dairy & FMCG supply chains</li>
-            </ul>
           </div>
         </div>
         
@@ -172,11 +144,6 @@
         <a href="/services.html">Logistics Management</a>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms & Conditions</a>
-      </div>
-      <div class="footer-col">
         <h4>Contact</h4>
         <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
         <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
@@ -190,6 +157,7 @@
       </div>
     </div>
   </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./main.js"></script>
     <script>
        // Simple script to animate charts if present

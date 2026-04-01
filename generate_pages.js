@@ -15,6 +15,10 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="${isSubdir ? '../' : './'}style.css?v=1.0.9" />
     <style>
       .page-header {
@@ -105,6 +109,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
       </div>
     </div>
   </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="${isSubdir ? '../' : './'}main.js"></script>
     <script>
        // Simple script to animate charts if present
@@ -477,39 +482,47 @@ const pages = [
                 <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto;">Scale your supply chain faster, cheaper, and cleaner seamlessly.</p>
             </div>
             
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
-                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
-                    <div style="width: 50px; height: 50px; background: rgba(0,255,136,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="ph-fill ph-wallet" style="font-size: 1.5rem; color: var(--primary-green);"></i>
+            <div class="swiper sustainability-slider reveal-up">
+                <div class="swiper-wrapper">
+                    <!-- 01 Lower Costs -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-wallet"></i></div>
+                            <h4>Lower Costs</h4>
+                            <p>Eliminate fuel surcharges completely. Predictable routing with flat EV rates saves huge costs on scale.</p>
+                        </div>
                     </div>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Lower Costs</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Eliminate fuel surcharges completely. Predictable routing with flat EV rates saves huge costs on scale.</p>
-                </div>
-                
-                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
-                    <div style="width: 50px; height: 50px; background: rgba(76,201,240,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="ph-fill ph-rocket-launch" style="font-size: 1.5rem; color: #4cc9f0;"></i>
+                    
+                    <!-- 02 Faster Delivery -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-rocket-launch"></i></div>
+                            <h4>Faster Delivery</h4>
+                            <p>Modern fleet telematics guarantee route optimization resulting in higher on-time deliveries natively.</p>
+                        </div>
                     </div>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Faster Delivery</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Modern fleet telematics guarantee route optimization resulting in higher on-time deliveries natively.</p>
-                </div>
-                
-                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
-                    <div style="width: 50px; height: 50px; background: rgba(0,255,136,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="ph-fill ph-certificate" style="font-size: 1.5rem; color: var(--primary-green);"></i>
+                    
+                    <!-- 03 Eco-Friendly -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-certificate"></i></div>
+                            <h4>Eco-Friendly Compliance</h4>
+                            <p>Accelerate your company's Net Zero targets perfectly aligning with immediate government standards.</p>
+                        </div>
                     </div>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Eco-Friendly Compliance</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">Accelerate your company's Net Zero targets perfectly aligning with immediate government standards.</p>
-                </div>
-                
-                <div class="glass" style="padding: 30px; border-radius: 16px; background: rgba(255,255,255,0.02); text-align: left; border: 1px solid rgba(255,255,255,0.05);">
-                    <div style="width: 50px; height: 50px; background: rgba(76,201,240,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <i class="ph-fill ph-chart-line-up" style="font-size: 1.5rem; color: #4cc9f0;"></i>
+                    
+                    <!-- 04 Scalable Fleet -->
+                    <div class="swiper-slide">
+                        <div class="service-card glass">
+                            <div class="service-icon"><i class="ph-fill ph-chart-line-up"></i></div>
+                            <h4>Scalable Fleet</h4>
+                            <p>From a few boxes to complex warehouse migrations, our dynamically sized EV fleet scales with you.</p>
+                        </div>
                     </div>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--white);">Scalable Fleet</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.5;">From a few boxes to complex warehouse migrations, our dynamically sized EV fleet scales with you.</p>
                 </div>
+                <!-- Pagination/Nav could be added here if needed, but keeping it simple for now -->
             </div>
+        </div>
             
         </div>
       `

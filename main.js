@@ -202,6 +202,30 @@ const b2bSlider = new Swiper('.b2b-slider', {
     },
 });
 
+// Initialize Sustainability Slider
+const sustainabilitySlider = new Swiper('.sustainability-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
+});
+
 // Only enable animateCursor on non-touch devices
 if (window.matchMedia("(pointer: fine)").matches) {
     animateCursor();
