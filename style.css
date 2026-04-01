@@ -681,13 +681,15 @@ svg {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 @media (max-width: 992px) {
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1476,14 +1478,7 @@ footer {
 }
 
 /* Remove legacy carousel to favor clean stacking or re-implement if requested later */
-@media (max-width: 1200px) {
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding-bottom: 0;
-  }
-}
+/* Media queries handled in main grid section */
 
 /* Mobile Responsive */
 @media (max-width: 1024px) {
@@ -1599,16 +1594,6 @@ footer {
 
   .why-stats {
     margin-top: 30px;
-  }
-
-  /* Refactor Services Slider to Vertical Stack */
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr !important; /* Override inline styles */
-    overflow-x: visible;
-    padding-bottom: 0;
-    gap: 40px;
-    scroll-snap-type: none;
   }
 
   .service-card {
@@ -2490,12 +2475,15 @@ textarea::placeholder {
   justify-content: center;
   gap: 30px;
   margin-top: 40px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-card {
-  flex: 1 1 calc(33.333% - 40px);
-  min-width: 320px;
-  max-width: 380px;
+  flex: 1 1 calc(50% - 30px);
+  min-width: 380px;
+  max-width: 520px;
   padding: 50px 40px;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.02);
