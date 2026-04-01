@@ -124,46 +124,41 @@ if (slides.length > 0) {
     }, 4000); // 4 seconds as requested
 }
 
-// Custom EV Cursor Follower
-const cursorFollower = document.createElement('div');
-cursorFollower.classList.add('cursor-follower');
-cursorFollower.innerHTML = '<i class="ph-fill ph-truck-trailer"></i>';
-document.body.appendChild(cursorFollower);
+// Custom EV Cursor Follower — desktop only
+if (window.matchMedia("(pointer: fine)").matches) {
+    const cursorFollower = document.createElement('div');
+    cursorFollower.classList.add('cursor-follower');
+    cursorFollower.innerHTML = '<i class="ph-fill ph-truck-trailer"></i>';
+    document.body.appendChild(cursorFollower);
 
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
 
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
 
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.1;
+        cursorY += (mouseY - cursorY) * 0.1;
 
-function animateCursor() {
-    // Smooth follow effect
-    cursorX += (mouseX - cursorX) * 0.1;
-    cursorY += (mouseY - cursorY) * 0.1;
+        cursorFollower.style.left = `${cursorX}px`;
+        cursorFollower.style.top = `${cursorY}px`;
 
-    cursorFollower.style.left = `${cursorX}px`;
-    cursorFollower.style.top = `${cursorY}px`;
-
-    // Rotate to face the cursor
-    const deltaX = mouseX - cursorX;
-    const deltaY = mouseY - cursorY;
-
-    // Default angle is 0deg (Front/Right)
-    let angle = 0;
-
-    // If moving significantly, calculate angle from movement
-    if (Math.abs(deltaX) > 0.5 || Math.abs(deltaY) > 0.5) {
-        angle = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
+        const deltaX = mouseX - cursorX;
+        const deltaY = mouseY - cursorY;
+        let angle = 0;
+        if (Math.abs(deltaX) > 0.5 || Math.abs(deltaY) > 0.5) {
+            angle = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
+        }
+        cursorFollower.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+        requestAnimationFrame(animateCursor);
     }
 
-    cursorFollower.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-
-    requestAnimationFrame(animateCursor);
+    animateCursor();
 }
 
 // Initialize B2B Slider
