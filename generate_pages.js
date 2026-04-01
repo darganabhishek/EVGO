@@ -99,7 +99,7 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
         <h4>Contact</h4>
         <p><i class="ph-fill ph-phone"></i> +91 9218303695</p>
         <p><i class="ph-fill ph-envelope"></i> evgo@evgomovers.com</p>
-        <p><i class="ph-fill ph-map-pin"></i> Pitampura, New Delhi</p>
+        <p><i class="ph-fill ph-map-pin"></i> 607, Aggarwal Chamber Plaza 1, N.S.P, New Delhi - 110034</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -553,10 +553,15 @@ const pages = [
                  <p style="margin-bottom: 20px;">Have questions or need a quote? Our team is here to help.</p>
                  
                  <div class="contact-info-item" style="margin-bottom: 20px;">
-                    <strong style="color:var(--primary-green)">Address:</strong>
-                    <p>Corporate office - Gurugram</p>
-                    <p>Registered office - Pitampura</p>
+                    <strong style="color:var(--primary-green)">Registered Office (New Delhi):</strong>
+                    <p>607, Aggarwal Chamber Plaza 1, Netaji Subhash Place Road, New Delhi, North West Delhi - 110034</p>
                  </div>
+
+                 <div class="contact-info-item" style="margin-bottom: 20px;">
+                    <strong style="color:var(--primary-green)">Corporate Office (Gurugram):</strong>
+                    <p>Plot no 34, Sector 44 Road, SM Sehgal Foundation, Sector 44, Gurugram, Haryana - 122003</p>
+                 </div>
+
                  <div class="contact-info-item" style="margin-bottom: 20px;">
                     <strong style="color:var(--primary-green)">Phone:</strong>
                     <p>+91 9218303695</p>
@@ -568,7 +573,7 @@ const pages = [
                  
                  <div class="contact-info-item" style="margin-bottom: 20px;">
                     <strong style="color:var(--primary-green)">Business Hours:</strong>
-                    <p>Monday – Saturday | 8:00 AM – 6:00 PM</p>
+                    <p>Monday – Saturday | 8:00 AM – 8:00 PM</p>
                  </div>
             </div>
             <div class="glass" style="padding: 30px;">
