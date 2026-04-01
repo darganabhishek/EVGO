@@ -314,8 +314,7 @@ const pages = [
                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-light); text-align: left;">
                    Virendra Kumar, Chief Business Officer at EV Go Movers, brings 11.5+ years of experience in data analytics, operational intelligence, and business strategy within the mobility sector.<br><br>
                    He specializes in building scalable, data-driven systems—focusing on KPI governance, cost optimization, and profitability across multi-city operations.<br><br>
-                   At EV Go Movers, he drives growth by aligning operations with strategy, enabling smarter decisions and stronger unit economics.<br><br>
-                   Focused on clarity, efficiency, and scale.
+                   At EV Go Movers, he drives growth by aligning operations with strategy, enabling smarter decisions and stronger unit economics.
                </p>
             </div>
          </div>
