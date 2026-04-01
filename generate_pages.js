@@ -385,9 +385,6 @@ const pages = [
           </div>
         </div>
         
-        <div class="text-center" style="margin-top:60px;">
-            <a href="/contact.html" class="btn btn-primary glow">Get a Free Quote Now</a>
-        </div>
     `
   },
   {
@@ -514,9 +511,6 @@ const pages = [
                 </div>
             </div>
             
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="/contact.html" class="btn btn-outline" style="padding: 12px 30px;">Speak to a Logistics Expert</a>
-            </div>
         </div>
       `
   },
