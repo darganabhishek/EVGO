@@ -589,7 +589,7 @@ const pages = [
             <div class="glass" style="padding: 30px;">
                 <form class="cta-form" id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
                     <input type="text" id="formName" placeholder="Name" required />
-                    <input type="email" id="formEmail" placeholder="email id" required />
+                    <input type="email" id="formEmail" placeholder="Email Id" required />
                     <input type="tel" id="formPhone" placeholder="Phone" required />
                     <button type="submit" class="btn btn-primary glow" style="width: 100%; justify-content: center;">Submit</button>
                     <a href="https://wa.me/919218303695" target="_blank" class="btn btn-whatsapp text-center" style="background:#25D366; border:none; color:white; justify-content:center;">WhatsApp Us</a>
