@@ -64,7 +64,6 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
 
     <header class="page-header">
       <div class="container">
-        <div class="breadcrumbs"><a href="/">Home</a> <span>/</span> ${title}</div>
         <h1 class="fade-in-up" style="font-size: 3rem; margin-top: 10px;">${title === 'Services' ? 'Our Electric Movers & Logistics Services' : title}</h1>
         ${heroCta}
       </div>
