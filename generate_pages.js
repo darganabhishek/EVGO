@@ -44,7 +44,6 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
       <div class="container nav-container">
         <a href="/" class="logo-wrapper">
           <img src="/images/ev-go-logo.png" alt="EV GO Logo" style="height: 48px;">
-          <span class="logo-text">MOVERS</span>
         </a>
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
