@@ -203,12 +203,21 @@ const template = (title, content, isSubdir = false, heroCta = '') => `
                window.open(whatsappUrl, '_blank');
            });
        }
+
+        // Tap-to-toggle bio for mobile touch devices
+        document.querySelectorAll('.team-card').forEach(card => {
+          card.addEventListener('click', function() {
+            const isTouch = window.matchMedia('(hover: none)').matches;
+            if (isTouch) {
+              document.querySelectorAll('.team-card').forEach(c => {
+                if (c !== card) c.classList.remove('active');
+              });
+              this.classList.toggle('active');
+            }
+          });
+        });
     </script>
   </body>
-</html>
-`;
-
-const pages = [
   {
     path: 'about.html',
     title: 'About EV GO MOVERS – Smart Electric Logistics Company',

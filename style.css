@@ -340,8 +340,8 @@ svg {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(10, 25, 47, 0.7) 0%,
-    rgba(10, 25, 47, 0.4) 50%,
+    rgba(10, 25, 47, 0.75) 0%,
+    rgba(10, 25, 47, 0.65) 50%,
     rgba(10, 25, 47, 1) 100%
   );
 }
@@ -386,15 +386,26 @@ svg {
 
 .hero p {
   font-size: 1.25rem;
-  color: var(--text-gray);
+  color: var(--text-light);
   margin-bottom: 30px;
   max-width: 480px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 768px) {
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 25px;
+    color: #e6f1ff;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
+  }
+  .overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 25, 47, 0.82) 0%,
+      rgba(10, 25, 47, 0.75) 50%,
+      rgba(10, 25, 47, 1) 100%
+    );
   }
 }
 
@@ -2650,4 +2661,93 @@ textarea::placeholder {
 .team-hover-overlay::-webkit-scrollbar-thumb {
   background: var(--primary-green);
   border-radius: 4px;
+}
+
+/* =============================================
+   MOBILE / TABLET RESPONSIVE FIXES
+   ============================================= */
+
+/* Team card: tap-to-show bio on touch devices */
+.team-card.active .team-hover-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.team-card.active .team-info {
+  opacity: 0;
+}
+
+/* Services grid: single column on mobile */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    min-width: unset;
+    max-width: 100%;
+    padding: 30px 24px;
+  }
+  .service-card-header {
+    margin: -30px -24px 20px -24px;
+    height: 180px;
+  }
+}
+
+/* Hero stat cards: prevent clipping on small screens */
+@media (max-width: 480px) {
+  .hero-stats {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .stat-card {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Team grid: 2-col on tablet, 1-col on mobile */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-card {
+    height: 350px;
+  }
+}
+
+/* Contact page: fix grid stacking */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Tap hint for mobile team cards */
+@media (hover: none) {
+  .team-card::after {
+    content: "Tap for bio";
+    position: absolute;
+    bottom: 70px;
+    right: 15px;
+    background: var(--primary-green);
+    color: var(--primary-blue);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    z-index: 3;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+  .team-card.active::after {
+    display: none;
+  }
 }
