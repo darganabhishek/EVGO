@@ -99,11 +99,10 @@
             </div>
             <div class="glass" style="padding: 30px;">
                 <form class="cta-form" id="contactForm" style="display: flex; flex-direction: column; gap: 15px;">
-                    <input type="text" id="formName" placeholder="Your Name" required />
-                    <input type="text" id="formPickup" placeholder="Pickup Location" required />
-                    <input type="text" id="formDrop" placeholder="Drop Location" required />
-                    <input type="tel" id="formPhone" placeholder="Phone Number" required />
-                    <button type="submit" class="btn btn-primary glow" style="width: 100%; justify-content: center;">Get Estimate</button>
+                    <input type="text" id="formName" placeholder="Name" required />
+                    <input type="email" id="formEmail" placeholder="email id" required />
+                    <input type="tel" id="formPhone" placeholder="Phone" required />
+                    <button type="submit" class="btn btn-primary glow" style="width: 100%; justify-content: center;">Submit</button>
                     <a href="https://wa.me/919218303695" target="_blank" class="btn btn-whatsapp text-center" style="background:#25D366; border:none; color:white; justify-content:center;">WhatsApp Us</a>
                 </form>
             </div>
@@ -228,13 +227,16 @@
                e.preventDefault();
                
                const name = document.getElementById('formName').value;
-               const pickup = document.getElementById('formPickup').value;
-               const drop = document.getElementById('formDrop').value;
+               const email = document.getElementById('formEmail').value;
                const phone = document.getElementById('formPhone').value;
                
-               const message = `Hello EV GO MOVERS! I would like to get a quote.%0A%0A*Name:* ${name}%0A*Pickup:* ${pickup}%0A*Drop:* ${drop}%0A*Phone:* ${phone}%0A%0APlease get back to me with an estimate.`;
+               const message = 'Hello EV GO! I would like to get in touch.%0A%0A' + 
+                               '*Name:* ' + name + '%0A' +
+                               '*Email:* ' + email + '%0A' +
+                               '*Phone:* ' + phone + '%0A%0A' +
+                               'Please contact me.';
                
-               const whatsappUrl = `https://wa.me/919218303695?text=${message}`;
+               const whatsappUrl = 'https://wa.me/919218303695?text=' + message;
                window.open(whatsappUrl, '_blank');
            });
        }
