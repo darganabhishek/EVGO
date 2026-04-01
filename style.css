@@ -2404,103 +2404,160 @@ textarea::placeholder {
   }
 }
 
-/* Services Page Overhaul */
+/* Services Section Redesign */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin-top: 40px;
 }
 
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .service-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
+  flex: 1 1 calc(33.333% - 40px);
+  min-width: 320px;
+  max-width: 380px;
+  padding: 50px 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   overflow: hidden;
-  transition: var(--transition);
   display: flex;
   flex-direction: column;
-  text-align: left;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(0, 255, 136, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--primary-green);
-  box-shadow: 0 15px 40px rgba(0, 255, 136, 0.1);
+  transform: translateY(-15px) scale(1.02);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 255, 136, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 255, 136, 0.1);
 }
 
-.service-card-header {
-  height: 200px;
-  overflow: hidden;
+.service-card:hover::before {
+  opacity: 1;
 }
 
-.service-card-header img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.service-card-body {
-  padding: 30px 25px;
-  flex-grow: 1;
-}
-
-.service-card-body h3 {
-  font-size: 1.4rem;
-  color: var(--white);
-  margin-bottom: 25px;
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  width: 100%;
-}
-
-.service-card-body h3::after {
-  content: '';
+.service-number {
   position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 40px;
-  height: 4px;
-  background: var(--primary-green);
-  border-radius: 4px;
+  top: 20px;
+  right: 30px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  font-family: var(--font-heading);
+  line-height: 1;
+  transition: all 0.5s ease;
+  user-select: none;
 }
 
-.service-feature-list {
-  list-style: none;
-  margin-top: 30px;
-  padding: 0;
+.service-card:hover .service-number {
+  color: rgba(0, 255, 136, 0.05);
+  transform: scale(1.1);
 }
 
-.service-feature-list li {
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 255, 136, 0.1);
+  color: var(--primary-green);
+  border-radius: 16px;
   display: flex;
-  gap: 12px;
-  margin-bottom: 15px;
-  color: var(--text-gray);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
   position: relative;
-  padding-left: 20px;
+  z-index: 1;
 }
 
-.service-feature-list li::before {
+.service-card:hover .service-icon {
+  background: var(--primary-green);
+  color: var(--primary-blue);
+  transform: rotateY(180deg);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.service-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: left;
+}
+
+.service-card h3::after {
   content: "";
-  display: block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--primary-green);
-  border-radius: 50%;
   position: absolute;
   left: 0;
-  top: 7px;
-  box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+  bottom: -10px;
+  width: 40px;
+  height: 3px;
+  background: var(--primary-green);
+  border-radius: 2px;
+  transition: width 0.5s ease;
 }
+
+.service-card:hover h3::after {
+  width: 60px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.service-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.service-card li {
+  font-size: 1rem;
+  color: var(--text-gray);
+  padding-left: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.service-card li::before {
+  content: " \2713";
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+.service-card:hover li {
+  color: var(--text-light);
+  transform: translateX(5px);
+}
+
 
 .team-card:hover .team-info {
   opacity: 0;
